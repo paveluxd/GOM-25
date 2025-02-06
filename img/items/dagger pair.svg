@@ -1,0 +1,25 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M12 12H26H40V26V40H26H12V26V12Z" stroke="#B3B3B3" stroke-width="2"/>
+<path opacity="0.4" d="M12 16V12H16" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M40 16V12H36" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M12 36V40H16" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M40 36V40H36" stroke="white" stroke-width="2"/>
+<rect x="11" y="25" width="4" height="2" fill="#D9D9D9"/>
+<rect x="37" y="25" width="4" height="2" fill="#D9D9D9"/>
+<rect x="27" y="11" width="4" height="2" transform="rotate(90 27 11)" fill="#D9D9D9"/>
+<rect x="27" y="37" width="4" height="2" transform="rotate(90 27 37)" fill="#D9D9D9"/>
+</g>
+<rect width="4" height="21" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 22.1816 24.1465)" fill="black"/>
+<path d="M22.1816 29.8032L17.939 25.5606L13.6964 21.3179" stroke="black" stroke-width="2"/>
+<path d="M21.4746 27.6821H15.8178V22.0253" stroke="black" stroke-width="2"/>
+<path d="M19.4637 27.3951L15.1677 26.9178L16.5249 25.5606L17.232 24.8535L16.5249 24.1463L15.8178 23.4392L28.5457 10.7113C29.7172 9.53974 31.6167 9.53974 32.7883 10.7113L34.9096 12.8326L20.0604 27.6819L19.8124 27.4338L19.4637 27.3951Z" fill="#8B9DA5" stroke="black" stroke-width="2"/>
+<path d="M27.8386 18.4897L29.96 16.3683L23.596 17.0755L21.4747 19.1968L27.8386 18.4897Z" fill="#D9D9D9"/>
+<rect width="6" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 7.33301 38.9956)" fill="black"/>
+<rect width="4" height="21" transform="matrix(0.707107 0.707107 0.707107 -0.707107 29.8184 27.8535)" fill="black"/>
+<path d="M29.8184 22.1968L34.061 26.4394L38.3036 30.6821" stroke="black" stroke-width="2"/>
+<path d="M30.5254 24.3184H36.1822V29.9752" stroke="black" stroke-width="2"/>
+<path d="M32.5363 24.6049L36.8323 25.0822L35.4751 26.4394L34.768 27.1465L35.4751 27.8537L36.1822 28.5608L23.4543 41.2887C22.2828 42.4603 20.3833 42.4603 19.2117 41.2887L17.0904 39.1674L31.9396 24.3181L32.1876 24.5662L32.5363 24.6049Z" fill="#8B9DA5" stroke="black" stroke-width="2"/>
+<path d="M27.697 35.6318L29.8184 33.5105L24.1615 33.5105L22.0402 35.6318L27.697 35.6318Z" fill="#D9D9D9"/>
+<rect width="6" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 50.3242 15.833)" fill="black"/>
+</svg>

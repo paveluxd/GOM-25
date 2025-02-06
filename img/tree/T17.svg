@@ -1,0 +1,31 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_315_143913)">
+<rect width="44" height="44" fill="url(#paint0_linear_315_143913)"/>
+<path opacity="0.3" d="M29.7433 30.669L46 12.606V36.4139L23 49.2939V46V45.5222L22.6283 45.2221L-3 24.5222V14L3.11765 25.4706L3.54545 26.2727L4.38461 25.9231L15.9795 21.0919L28 26.6398V30V32.606L29.7433 30.669Z" stroke="black" stroke-width="2"/>
+<rect x="20" y="8" width="4" height="28" fill="white" stroke="black" stroke-width="2"/>
+<rect x="8" y="8" width="4" height="28" fill="white" stroke="black" stroke-width="2"/>
+<rect x="32" y="8" width="4" height="28" fill="white" stroke="black" stroke-width="2"/>
+<rect x="17" y="17" width="10" height="2" fill="black"/>
+<rect x="6.46436" y="9" width="12" height="2" transform="rotate(45 6.46436 9)" fill="black"/>
+<rect width="12" height="2" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13.5356 9)" fill="black"/>
+<rect x="4" y="13" width="12" height="2" fill="black"/>
+<rect x="35" y="12" width="4" height="2" fill="black"/>
+<rect x="35" y="7" width="4" height="2" fill="black"/>
+<rect x="35" y="17" width="4" height="2" fill="black"/>
+<rect x="29" y="12" width="4" height="2" fill="black"/>
+<rect x="29" y="7" width="4" height="2" fill="black"/>
+<rect x="29" y="17" width="4" height="2" fill="black"/>
+<rect x="19" y="13" width="6" height="2" fill="black"/>
+<rect x="17" y="9" width="10" height="2" fill="black"/>
+<rect x="1" y="1" width="42" height="42" stroke="black" stroke-opacity="0.4" stroke-width="2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_315_143913" x1="22" y1="0" x2="22" y2="44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0073DC"/>
+<stop offset="1" stop-color="#009ADC"/>
+</linearGradient>
+<clipPath id="clip0_315_143913">
+<rect width="44" height="44" fill="white"/>
+</clipPath>
+</defs>
+</svg>

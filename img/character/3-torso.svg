@@ -1,0 +1,18 @@
+<svg width="128" height="144" viewBox="0 0 128 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M69.5473 28H43V55H81L81.5391 40.4441C81.7908 33.6472 76.3489 28 69.5473 28Z" fill="#54609F" stroke="black" stroke-width="2"/>
+<path d="M79 59H48V55H79V59Z" fill="#2A3EA4" stroke="black" stroke-width="2"/>
+<path d="M81.5 44.5L74 55H58L73.5 29" stroke="black" stroke-width="2"/>
+<path d="M80 59H48L43.3964 60.322L41 72H57.6419H80V59Z" fill="#54609F" stroke="black" stroke-width="2"/>
+<path d="M81 59H61.059L58 72H85L81 59Z" fill="#263464" stroke="black" stroke-width="2"/>
+<mask id="path-6-inside-1_3512_16093" fill="white">
+<path d="M57 28C57 29.9698 56.612 31.9204 55.8582 33.7403C55.1044 35.5601 53.9995 37.2137 52.6066 38.6066C51.2137 39.9995 49.5601 41.1044 47.7403 41.8582C45.9204 42.612 43.9698 43 42 43L42 28H57Z"/>
+</mask>
+<path d="M57 28C57 29.9698 56.612 31.9204 55.8582 33.7403C55.1044 35.5601 53.9995 37.2137 52.6066 38.6066C51.2137 39.9995 49.5601 41.1044 47.7403 41.8582C45.9204 42.612 43.9698 43 42 43L42 28H57Z" fill="black" fill-opacity="0.5" stroke="black" stroke-width="4" mask="url(#path-6-inside-1_3512_16093)"/>
+<path opacity="0.3" d="M40 89H85V73H40V89Z" fill="url(#paint0_linear_3512_16093)"/>
+<defs>
+<linearGradient id="paint0_linear_3512_16093" x1="60.5" y1="73" x2="60.5" y2="89" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

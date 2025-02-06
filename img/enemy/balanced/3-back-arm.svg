@@ -1,0 +1,29 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" fill="#3A2E2E"/>
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" fill="url(#paint0_linear_3575_13485)" fill-opacity="0.6"/>
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" stroke="black" stroke-width="2"/>
+<path d="M99.1455 59.9995C112.325 54.1305 114.645 71.43 114.645 71.43L114.645 99.0691L104.198 87.0691L103.466 99.0691L94.5 87.0691C94.5 87.0691 83.0072 111.467 86.0007 99.0691C88.9942 86.6713 85.9665 65.8686 99.1455 59.9995Z" fill="#95512A"/>
+<path d="M99.1455 59.9995C112.325 54.1305 114.645 71.43 114.645 71.43L114.645 99.0691L104.198 87.0691L103.466 99.0691L94.5 87.0691C94.5 87.0691 83.0072 111.467 86.0007 99.0691C88.9942 86.6713 85.9665 65.8686 99.1455 59.9995Z" fill="url(#paint1_linear_3575_13485)" fill-opacity="0.6"/>
+<path d="M99.1455 59.9995C112.325 54.1305 114.645 71.43 114.645 71.43L114.645 99.0691L104.198 87.0691L103.466 99.0691L94.5 87.0691C94.5 87.0691 83.0072 111.467 86.0007 99.0691C88.9942 86.6713 85.9665 65.8686 99.1455 59.9995Z" stroke="black" stroke-width="2"/>
+<path d="M106 78V78C97.7157 78 91 71.2843 91 63V55H106V78Z" fill="#242424" stroke="black" stroke-width="2"/>
+<rect x="92" y="51" width="2" height="3" fill="black"/>
+<rect x="96" y="51" width="2" height="3" fill="black"/>
+<rect x="100" y="51" width="2" height="3" fill="black"/>
+<path d="M94.9997 100L86.9999 100L85 112L95 111.999L94.9997 100Z" fill="#282828"/>
+<path d="M94.9997 100L86.9999 100L85 112L95 111.999L94.9997 100Z" fill="white" fill-opacity="0.2"/>
+<path d="M94.9997 100L86.9999 100L85 112L95 111.999L94.9997 100Z" stroke="black" stroke-width="2"/>
+<path d="M94 95L88 95.0001V100H93.9999L94 95Z" fill="#282828" stroke="black" stroke-width="2"/>
+<path d="M93 112L89 112V118H93L93 112Z" fill="#282828" stroke="black" stroke-width="2"/>
+<path d="M89 112L85 112V117H89L89 112Z" fill="#282828" stroke="black" stroke-width="2"/>
+<path d="M97 112L93 112V118H97L97 112Z" fill="#282828" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_3575_13485" x1="148.25" y1="59" x2="148.25" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3575_13485" x1="112.107" y1="70.6732" x2="101.753" y2="105.382" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

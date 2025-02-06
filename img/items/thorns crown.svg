@@ -1,0 +1,29 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45.7235 26C45.9053 25.3496 46 24.6814 46 24C46 17.3726 37.0457 12 26 12C14.9543 12 6 17.3726 6 24C6 24.6814 6.09466 25.3496 6.27653 26C6.09466 26.6504 6 27.3186 6 28C6 34.6274 14.9543 40 26 40C37.0457 40 46 34.6274 46 28C46 27.3186 45.9053 26.6504 45.7235 26ZM45.7235 26C44.1365 20.3246 35.91 16 26 16C16.09 16 7.86346 20.3246 6.27653 26C7.86346 31.6754 16.09 36 26 36C35.91 36 44.1365 31.6754 45.7235 26Z" fill="url(#paint0_linear_3498_7641)"/>
+<path d="M45 28C45 30.8244 43.0867 33.5523 39.6276 35.6278C36.1885 37.6913 31.3728 39 26 39C20.6272 39 15.8115 37.6913 12.3724 35.6278C8.91329 33.5523 7 30.8244 7 28C7 25.1756 8.91329 22.4477 12.3724 20.3722C15.8115 18.3087 20.6272 17 26 17C31.3728 17 36.1885 18.3087 39.6276 20.3722C43.0867 22.4477 45 25.1756 45 28Z" stroke="black" stroke-width="2"/>
+<path d="M45 24C45 26.8244 43.0867 29.5523 39.6276 31.6278C36.1885 33.6913 31.3728 35 26 35C20.6272 35 15.8115 33.6913 12.3724 31.6278C8.91329 29.5523 7 26.8244 7 24C7 21.1756 8.91329 18.4477 12.3724 16.3722C15.8115 14.3087 20.6272 13 26 13C31.3728 13 36.1885 14.3087 39.6276 16.3722C43.0867 18.4477 45 21.1756 45 24Z" stroke="black" stroke-width="2"/>
+<path d="M45 28C45 24 49 24 49 20" stroke="black" stroke-width="2"/>
+<path d="M45 24C45 20 49 20 49 16" stroke="black" stroke-width="2"/>
+<path d="M26 17C18 17 18 13 10 13" stroke="black" stroke-width="2"/>
+<path d="M26 13C18 13 18 9 10 9" stroke="black" stroke-width="2"/>
+<path d="M7 28C7 32 3 32 3 36" stroke="black" stroke-width="2"/>
+<path d="M7 24C7 28 3 28 3 32" stroke="black" stroke-width="2"/>
+<path d="M26 39C34 39 34 43 42 43" stroke="black" stroke-width="2"/>
+<path d="M26 35C34 35 34 39 42 39" stroke="black" stroke-width="2"/>
+<path d="M18 31V34" stroke="black" stroke-width="2"/>
+<path d="M26 32V36" stroke="black" stroke-width="2"/>
+<path d="M26 38V42" stroke="black" stroke-width="2"/>
+<path d="M34 31V34" stroke="black" stroke-width="2"/>
+<path d="M34 11V14" stroke="black" stroke-width="2"/>
+<path d="M18 38L18 41" stroke="black" stroke-width="2"/>
+<path d="M34 18L34 21" stroke="black" stroke-width="2"/>
+<path d="M26 16V20" stroke="black" stroke-width="2"/>
+<path d="M26 10V14" stroke="black" stroke-width="2"/>
+<path d="M18 18L18 21" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_3498_7641" x1="26" y1="12" x2="26" y2="40" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6A8E58"/>
+<stop offset="1" stop-color="#4C5847"/>
+</linearGradient>
+</defs>
+</svg>

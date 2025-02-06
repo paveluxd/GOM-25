@@ -1,0 +1,37 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M75 114H72V121H75M75 114H78V121H75M75 114V103M75 114V117M75 121V125M75 128V125M75 125H72V132H75M75 125H78V132H75M75 132V136M75 139V136M75 136H72V143H75M75 136H78V143H75M75 143V163" stroke="black" stroke-width="2"/>
+<path d="M69 106L65 104V110H69V106Z" fill="#292626" stroke="black" stroke-width="2"/>
+<rect x="86" y="152" width="2" height="22" transform="rotate(90 86 152)" fill="black"/>
+<rect x="66.5147" y="145.929" width="2" height="22" transform="rotate(-45 66.5147 145.929)" fill="black"/>
+<rect x="82.071" y="144.515" width="2" height="22" transform="rotate(45 82.071 144.515)" fill="black"/>
+<rect x="70" y="148" width="10" height="10" fill="#B29568" stroke="black" stroke-width="2"/>
+<rect x="76" y="152" width="2" height="2" transform="rotate(90 76 152)" fill="black"/>
+<rect x="69" y="106" width="99" height="4" fill="#B39568" stroke="black" stroke-width="2"/>
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" fill="#3A2E2E"/>
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" fill="url(#paint0_linear_3573_11210)" fill-opacity="0.6"/>
+<path d="M82 101L92.5 59L101.5 75.2892V101H82Z" stroke="black" stroke-width="2"/>
+<path d="M99.1455 60L110.645 67.4304L110.645 95.0695L100.198 83.0695L99.4655 95.0695L90.5 83.0695L82.0007 95.0695C84.9942 82.6718 99.1455 60 99.1455 60Z" fill="#952A2A"/>
+<path d="M99.1455 60L110.645 67.4304L110.645 95.0695L100.198 83.0695L99.4655 95.0695L90.5 83.0695L82.0007 95.0695C84.9942 82.6718 99.1455 60 99.1455 60Z" fill="url(#paint1_linear_3573_11210)" fill-opacity="0.6"/>
+<path d="M99.1455 60L110.645 67.4304L110.645 95.0695L100.198 83.0695L99.4655 95.0695L90.5 83.0695L82.0007 95.0695C84.9942 82.6718 99.1455 60 99.1455 60Z" stroke="black" stroke-width="2"/>
+<path d="M106 78V78C97.7157 78 91 71.2843 91 63V55H106V78Z" fill="#666060" stroke="black" stroke-width="2"/>
+<rect x="92" y="51" width="2" height="3" fill="black"/>
+<rect x="96" y="51" width="2" height="3" fill="black"/>
+<rect x="100" y="51" width="2" height="3" fill="black"/>
+<path d="M94.9997 96L86.9999 96L85 108L95 107.999L94.9997 96Z" fill="#666060"/>
+<path d="M94.9997 96L86.9999 96L85 108L95 107.999L94.9997 96Z" fill="white" fill-opacity="0.2"/>
+<path d="M94.9997 96L86.9999 96L85 108L95 107.999L94.9997 96Z" stroke="black" stroke-width="2"/>
+<path d="M94 91L88 91.0001V96H93.9999L94 91Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M93 108L89 108V114H93L93 108Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M89 108L85 108V113H89L89 108Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M97 108L93 108V114H97L97 108Z" fill="#666060" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_3573_11210" x1="148.25" y1="59" x2="148.25" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3573_11210" x1="108.107" y1="66.6732" x2="97.7529" y2="101.382" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

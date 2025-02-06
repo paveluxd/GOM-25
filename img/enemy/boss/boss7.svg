@@ -1,0 +1,43 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M92 76H57V113H88L92 76Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M80 113H57V128H80V113Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M80 109H57V113H80V109Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M59 113H54V123H59V113Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M84 43V43C66.8792 43 53 56.8792 53 74V76H99V55C99 48.3726 93.6274 43 87 43H84Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M76 48H172L168 112L172 120.5V135H76V112V48Z" fill="#2C2C2C" stroke="black" stroke-width="2"/>
+<path d="M84 48H152L148 91.5V105V117.25L152 135L80 131L84 111L80 91.5L84 48Z" fill="#232121" stroke="black" stroke-width="2"/>
+<rect x="74" y="105" width="96" height="6" fill="#7E644C" stroke="black" stroke-width="2"/>
+<rect x="123.242" y="106" width="24" height="6" transform="rotate(45 123.242 106)" fill="#7E644C" stroke="black" stroke-width="2"/>
+<rect x="118" y="105" width="8" height="6" fill="#7E644C" stroke="black" stroke-width="2"/>
+<path d="M80 135H119L111 168H80V135Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M130 135H165V168H134L130 135Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M155 75H190V92.7273L186 114H159V92.7273L155 75Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M105 17H132V48H105V17Z" fill="#333333" stroke="black" stroke-width="2"/>
+<rect x="105" y="29" width="19" height="4" fill="#202020" stroke="black" stroke-width="2"/>
+<rect x="105" y="38" width="4" height="2" fill="black"/>
+<rect x="105" y="42" width="4" height="2" fill="black"/>
+<rect x="111" y="38" width="4" height="2" fill="black"/>
+<rect x="111" y="42" width="4" height="2" fill="black"/>
+<rect x="117" y="38" width="4" height="2" fill="black"/>
+<rect x="117" y="42" width="4" height="2" fill="black"/>
+<path d="M164 42V42C181.121 42 195 55.8792 195 73V75H148V58C148 49.1634 155.163 42 164 42V42Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M76 175H111V168H80L76 175Z" fill="#393939" stroke="black" stroke-width="2"/>
+<rect width="31" height="7" transform="matrix(1 0 0 -1 134 175)" fill="#393939" stroke="black" stroke-width="2"/>
+<path d="M124 87V78H100V87" stroke="#7F2F2F" stroke-width="6"/>
+<path d="M97 96H127" stroke="#7F2F2F" stroke-width="6"/>
+<rect x="109" y="87" width="6" height="12" fill="#7F2F2F"/>
+<rect x="109" y="69" width="6" height="12" fill="#7F2F2F"/>
+<rect x="121" y="69" width="6" height="12" fill="#7F2F2F"/>
+<rect x="97" y="69" width="6" height="12" fill="#7F2F2F"/>
+<path d="M182 114H159V129H182V114Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M182 110H159V114H182V110Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M164 114H159V124H164V114Z" fill="#262626" stroke="black" stroke-width="2"/>
+<path d="M107 61H89C81.8203 61 76 55.1797 76 48V48H107V61Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M107 61H89C81.8203 61 76 55.1797 76 48V48H107V61Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<path d="M118 61H136C143.18 61 149 55.1797 149 48V48H118V61Z" fill="#0E0E0E" stroke="black" stroke-width="2"/>
+<mask id="path-37-inside-1_470_74989" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M61 111H55V117H13L5 120.5L13 124H55V130H61V124H63V117H61V111Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M61 111H55V117H13L5 120.5L13 124H55V130H61V124H63V117H61V111Z" fill="#666666"/>
+<path d="M55 111V109H53V111H55ZM61 111H63V109H61V111ZM55 117V119H57V117H55ZM13 117V115H12.5816L12.1984 115.168L13 117ZM5 120.5L4.19836 118.668L0.0102145 120.5L4.19836 122.332L5 120.5ZM13 124L12.1984 125.832L12.5816 126H13V124ZM55 124H57V122H55V124ZM55 130H53V132H55V130ZM61 130V132H63V130H61ZM61 124V122H59V124H61ZM63 124V126H65V124H63ZM63 117H65V115H63V117ZM61 117H59V119H61V117ZM55 113H61V109H55V113ZM57 117V111H53V117H57ZM13 119H55V115H13V119ZM5.80164 122.332L13.8016 118.832L12.1984 115.168L4.19836 118.668L5.80164 122.332ZM13.8016 122.168L5.80164 118.668L4.19836 122.332L12.1984 125.832L13.8016 122.168ZM55 122H13V126H55V122ZM57 130V124H53V130H57ZM61 128H55V132H61V128ZM59 124V130H63V124H59ZM63 122H61V126H63V122ZM61 117V124H65V117H61ZM61 119H63V115H61V119ZM59 111V117H63V111H59Z" fill="black" mask="url(#path-37-inside-1_470_74989)"/>
+</svg>

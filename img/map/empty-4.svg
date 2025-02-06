@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M79.055 106C79.0186 105.835 79 105.669 79 105.5C79 102.462 85.0442 100 92.5 100C99.9558 100 106 102.462 106 105.5C106 105.669 105.981 105.835 105.945 106H106L105.937 106.034C105.441 108.132 102.05 109.886 97.4112 110.625L93 113L88.5122 110.756C83.4023 110.113 79.5881 108.268 79.0621 106.031L79 106H79.055Z" fill="url(#paint0_linear_3722_31761)" fill-opacity="0.2"/>
+<path d="M97 84.9167L92 75L87.5 84H89L83 94H85L80 101C80 101.657 80.3233 102.307 80.9515 102.913C81.5797 103.52 82.5004 104.071 83.6612 104.536C84.8219 105 86.1999 105.368 87.7165 105.619C89.233 105.871 90.8585 106 92.5 106C94.1415 106 95.767 105.871 97.2835 105.619C98.8001 105.368 100.178 105 101.339 104.536C102.5 104.071 103.42 103.52 104.048 102.913C104.677 102.307 105 101.657 105 101L99 93H101L95.5 84.9167H97Z" fill="#605237" stroke="black" stroke-width="2"/>
+<rect opacity="0.2" width="2" height="4" transform="matrix(-1 0 0 1 95 97)" fill="black"/>
+<rect width="2" height="4" transform="matrix(-1 0 0 1 100 103)" fill="#605237"/>
+<rect x="82" y="102" width="2" height="4" fill="#605237"/>
+<rect x="84" y="102" width="2" height="4" fill="black"/>
+<rect x="96" y="103" width="2" height="4" fill="black"/>
+<rect opacity="0.2" width="2" height="4" transform="matrix(-1 0 0 1 93 93)" fill="black"/>
+<rect x="18" y="87" width="2" height="4" fill="black" fill-opacity="0.2"/>
+<rect x="32" y="93" width="2" height="4" fill="black" fill-opacity="0.2"/>
+<rect x="99" y="24" width="2" height="4" fill="black" fill-opacity="0.2"/>
+<rect x="118" y="52" width="2" height="4" fill="black" fill-opacity="0.2"/>
+<defs>
+<linearGradient id="paint0_linear_3722_31761" x1="92.5" y1="100" x2="92.5" y2="113" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

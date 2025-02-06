@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="2" height="4" transform="matrix(1 0 0 -1 19 32)" fill="black" fill-opacity="0.2"/>
+<rect width="2" height="4" transform="matrix(1 0 0 -1 38 4)" fill="black" fill-opacity="0.2"/>
+<path d="M64 67H67M70 67H67M67 67V64M67 67V72" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M75 79H78M81 79H78M78 79V76M78 79V82" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M86 67H89M92 67H89M89 67V64M89 67V72" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M76 72V66H80V72" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M87 82V79H91V82" stroke="black" stroke-width="2"/>
+<path d="M86 91H92" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M64 91H67M70 91H67M67 91V88" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M65 82V78C65 76.8954 65.8954 76 67 76V76C68.1046 76 69 76.8954 69 78V82" stroke="#161919" stroke-width="2"/>
+<path d="M76 92V88C76 86.8954 76.8954 86 78 86V86C79.1046 86 80 86.8954 80 88V92" stroke="black" stroke-opacity="0.5" stroke-width="2"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="128" height="144" viewBox="0 0 128 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M81.0093 34.9347L78 56L80 58L84 79H74.9949L70 71L64 79H41L46 58L49 56L46 53V36C46 31.5817 49.5817 28 54 28H64.9899L70 32L74.9949 28C78.6922 28 81.5322 31.2746 81.0093 34.9347Z" fill="#B28C52"/>
+<path d="M57 56H78M57 56H49M57 56V61M78 56L81.0093 34.9347C81.5322 31.2746 78.6922 28 74.9949 28V28L70 32L64.9899 28H54C49.5817 28 46 31.5817 46 36V53L49 56M78 56L80 58L84 79H74.9949L70 71L64 79H41L46 58L49 56" stroke="black" stroke-width="2"/>
+<path d="M76 38L76 28L82 28L82 38L76 38Z" fill="#71382C"/>
+<path d="M76 28L75 28L75 27L76 27L76 28ZM76 38L76 39L75 39L75 38L76 38ZM82 28L82 27L83 28L82 28ZM82 38L83 38L83 39L82 39L82 38ZM77 28L77 38L75 38L75 28L77 28ZM82 29L76 29L76 27L82 27L82 29ZM81 38L81 28L83 28L83 38L81 38ZM76 37L82 37L82 39L76 39L76 37Z" fill="black"/>
+<circle cx="80" cy="39" r="4" fill="#C1C1C1" stroke="black" stroke-width="2"/>
+<path d="M70 32L70 72" stroke="black" stroke-width="2"/>
+<path opacity="0.3" d="M40 96H85V79H75L70 71.5L64 79H40V96Z" fill="url(#paint0_linear_3511_13992)"/>
+<g style="mix-blend-mode:overlay" opacity="0.2">
+<path d="M49 30L58 28V53H70V46H79L78 55H70V71L64 79H44L49 56V30Z" fill="black"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.5">
+<rect x="67" y="34" width="2" height="14" fill="#FFD37E"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.5">
+<rect x="67" y="57" width="2" height="2" fill="#FFD37E"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3511_13992" x1="60.5" y1="80" x2="60.5" y2="96" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

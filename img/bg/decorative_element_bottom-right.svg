@@ -1,0 +1,7 @@
+<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9" y="9" width="9" height="9" transform="rotate(-180 9 9)" fill="black" fill-opacity="0.4"/>
+<path d="M8 2V8H2" stroke="#949494" stroke-width="2"/>
+<path d="M8 8L1 1" stroke="#949494" stroke-width="2"/>
+<rect x="2" y="9" width="2" height="2" transform="rotate(-180 2 9)" fill="black" fill-opacity="0.4"/>
+<rect x="9" y="2" width="2" height="2" transform="rotate(-180 9 2)" fill="black" fill-opacity="0.4"/>
+</svg>

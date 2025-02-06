@@ -1,0 +1,16 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="12" height="2" transform="matrix(-1 0 0 1 32 18)" fill="black"/>
+<path d="M28 16H39L36 18V23V27V34" stroke="black" stroke-width="4"/>
+<path d="M24 16H13L16 18V23V27V34" stroke="black" stroke-width="4"/>
+<path d="M28 43H24V9H28V43Z" fill="#606060" stroke="black" stroke-width="2"/>
+<rect width="20" height="2" transform="matrix(-1 0 0 1 36 16)" fill="#606060"/>
+<rect width="6" height="2" transform="matrix(-1 0 0 1 29 42)" fill="#606060"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 31 33)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 31 42)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 31 25)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 27 6)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 23 25)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 23 33)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 23 42)" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 27 44)" fill="black"/>
+</svg>

@@ -1,0 +1,47 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 7H26H40V43.2792L26 47.9459L12 43.2792V7Z" fill="url(#paint0_linear_3462_8870)" stroke="black" stroke-width="2"/>
+<rect x="14" y="13" width="2" height="5" transform="rotate(90 14 13)" fill="black"/>
+<rect x="13" y="29" width="2" height="4" transform="rotate(90 13 29)" fill="black"/>
+<rect x="43" y="13" width="2" height="4" transform="rotate(90 43 13)" fill="black"/>
+<rect x="43" y="29" width="2" height="4" transform="rotate(90 43 29)" fill="black"/>
+<rect x="30" y="4" width="2" height="8" fill="black"/>
+<rect x="20" y="4" width="2" height="8" fill="black"/>
+<rect opacity="0.2" x="45" y="6" width="2" height="40" fill="black"/>
+<rect opacity="0.2" x="5" y="6" width="2" height="40" fill="black"/>
+<path d="M26 24V16C26 13.7909 27.7909 12 30 12H35" stroke="url(#paint1_linear_3462_8870)" stroke-width="2"/>
+<rect x="17" y="21" width="2" height="2" fill="black"/>
+<rect x="33" y="21" width="2" height="2" fill="black"/>
+<rect x="37" y="13" width="2" height="2" fill="black"/>
+<rect x="13" y="13" width="2" height="2" fill="black"/>
+<rect x="33" y="27" width="2" height="2" fill="black"/>
+<rect x="17" y="27" width="2" height="2" fill="black"/>
+<rect x="30" y="12" width="2" height="7" fill="black"/>
+<rect x="20" y="12" width="2" height="7" fill="black"/>
+<path d="M28 30V28C28 25.7909 29.7909 24 32 24H37" stroke="black" stroke-width="2"/>
+<path d="M28 36V34C28 31.7909 29.7909 30 32 30H37" stroke="black" stroke-width="2"/>
+<path d="M28 42V40C28 37.7909 29.7909 36 32 36H37" stroke="black" stroke-width="2"/>
+<path d="M28 24V22C28 19.7909 29.7909 18 32 18H37" stroke="black" stroke-width="2"/>
+<path d="M31 18V16C31 13.7909 32.7909 12 35 12H37" stroke="black" stroke-width="2"/>
+<path d="M21 19L21 16C21 13.7909 19.2091 12 17 12L16 12" stroke="black" stroke-width="2"/>
+<path d="M26 24V16C26 13.7909 24.2091 12 22 12H15" stroke="url(#paint2_linear_3462_8870)" stroke-width="2"/>
+<path d="M24 24V22C24 19.7909 22.2091 18 20 18H15" stroke="black" stroke-width="2"/>
+<path d="M24 30V28C24 25.7909 22.2091 24 20 24H15" stroke="black" stroke-width="2"/>
+<path d="M24 36V34C24 31.7909 22.2091 30 20 30H15" stroke="black" stroke-width="2"/>
+<path d="M24 42V40C24 37.7909 22.2091 36 20 36H15" stroke="black" stroke-width="2"/>
+<rect x="33" y="33" width="2" height="2" fill="black"/>
+<rect x="17" y="33" width="2" height="2" fill="black"/>
+<defs>
+<linearGradient id="paint0_linear_3462_8870" x1="41" y1="11.6" x2="15.7771" y2="42.0776" gradientUnits="userSpaceOnUse">
+<stop offset="0.120064" stop-color="#696969"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3462_8870" x1="30.5" y1="12" x2="30.5" y2="24" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_3462_8870" x1="20.5" y1="12" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

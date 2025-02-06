@@ -1,0 +1,20 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M126 176L136 176L136 170L135 155L122 155L126 170L126 176Z" fill="black"/>
+<path d="M119 176L103 176L109 171L106 155L119 155L119 176Z" fill="black"/>
+<path opacity="0.3" d="M126 176L136 176L136 182L136 192L123 192L126 182L126 176Z" fill="url(#paint0_linear_4073_65291)"/>
+<path opacity="0.3" d="M119 176L103 176L109 181L106 192L119 192L119 176Z" fill="url(#paint1_linear_4073_65291)"/>
+<path d="M136.915 160L133.078 113H114.153L120.868 160H136.915Z" fill="#787878" stroke="black" stroke-width="2"/>
+<path d="M102 113L117 113L120 160L105 160L102 131V113Z" fill="#787878" stroke="black" stroke-width="2"/>
+<path d="M117 145H110L106 149L101.98 145L99 145" stroke="black" stroke-width="2"/>
+<path d="M136 145L131 145L127 149L123 145L118 145" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_4073_65291" x1="129" y1="176" x2="129" y2="192" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4073_65291" x1="111" y1="176" x2="111" y2="192" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

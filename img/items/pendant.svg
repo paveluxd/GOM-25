@@ -1,0 +1,20 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 36H17V41H18V43C18 45.2091 16.2091 47 14 47V47C11.7909 47 10 45.2091 10 43V41H11V36Z" fill="#FF9900" stroke="black" stroke-width="2"/>
+<rect x="9" y="27" width="2" height="10" fill="black"/>
+<rect x="17" y="21" width="2" height="16" fill="black"/>
+<rect x="25" y="21" width="2" height="7" fill="black"/>
+<path d="M34 35H46V45C46 46.1046 45.1046 47 44 47H36C34.8954 47 34 46.1046 34 45V35Z" fill="#39943D" stroke="black" stroke-width="2"/>
+<rect x="33" y="21" width="2" height="13" fill="black"/>
+<rect opacity="0.2" x="37" y="42" width="6" height="2" fill="white"/>
+<rect opacity="0.2" x="41" y="38" width="2" height="2" fill="white"/>
+<path d="M46 37V34L43 27" stroke="black" stroke-width="2"/>
+<path d="M5 9C5 6.79086 6.79086 5 9 5H43C45.2091 5 47 6.79086 47 9V16C47 20.4183 43.4183 24 39 24H13C8.58172 24 5 20.4183 5 16V9Z" stroke="#6D6D6D" stroke-width="2"/>
+<path d="M22 32C22 29.7909 23.7909 28 26 28V28C28.2091 28 30 29.7909 30 32V43C30 45.2091 28.2091 47 26 47V47C23.7909 47 22 45.2091 22 43V32Z" fill="#B9B9B9" stroke="black" stroke-width="2"/>
+<path opacity="0.5" d="M22 36C22 33.7909 23.7909 32 26 32V32C28.2091 32 30 33.7909 30 36V41C30 43.2091 28.2091 45 26 45V45C23.7909 45 22 43.2091 22 41V36Z" fill="#B9B9B9" stroke="black" stroke-width="2"/>
+<path d="M22 43C22 40.7909 23.7909 39 26 39V39C28.2091 39 30 40.7909 30 43V43C30 45.2091 28.2091 47 26 47V47C23.7909 47 22 45.2091 22 43V43Z" fill="#B9B9B9" stroke="black" stroke-width="2"/>
+<rect x="24" y="4" width="4" height="2" fill="black"/>
+<rect x="26" y="6" width="2" height="2" fill="black"/>
+<rect x="35" y="23" width="2" height="2" fill="black"/>
+<rect x="27" y="23" width="2" height="2" fill="black"/>
+<rect x="19" y="23" width="2" height="2" fill="black"/>
+</svg>

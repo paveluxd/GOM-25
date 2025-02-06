@@ -1,0 +1,27 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M12 12H26H40V26V40H26H12V26V12Z" stroke="#B3B3B3" stroke-width="2"/>
+<path opacity="0.4" d="M12 16V12H16" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M40 16V12H36" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M12 36V40H16" stroke="white" stroke-width="2"/>
+<path opacity="0.4" d="M40 36V40H36" stroke="white" stroke-width="2"/>
+<rect x="11" y="25" width="4" height="2" fill="#D9D9D9"/>
+<rect x="37" y="25" width="4" height="2" fill="#D9D9D9"/>
+<rect x="27" y="11" width="4" height="2" transform="rotate(90 27 11)" fill="#D9D9D9"/>
+<rect x="27" y="37" width="4" height="2" transform="rotate(90 27 37)" fill="#D9D9D9"/>
+</g>
+<path d="M21.74 33.26L18.74 30.26L26.0342 22.9658L29.0342 25.9658L21.74 33.26Z" fill="#4F4E4B"/>
+<path d="M21.74 33.26L18.74 30.26L26.0342 22.9658L29.0342 25.9658L21.74 33.26Z" fill="black"/>
+<path d="M21.74 33.26L18.74 30.26L26.0342 22.9658L29.0342 25.9658L21.74 33.26Z" stroke="black" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45 4L48 7L27.1831 27.8164L24.1831 24.8164L45 4Z" fill="url(#paint0_linear_966_25772)" stroke="black" stroke-width="2"/>
+<path d="M6 46L21 31" stroke="black" stroke-width="2"/>
+<path d="M19 25L27 33" stroke="black" stroke-width="2"/>
+<path d="M12 36L16 40" stroke="black" stroke-width="2"/>
+<path d="M12 50L12 47L16 43L19 43L19 40L22 37L25 37L20 32L15 27L15 30L12 33H9L9 36L5 40L2 40" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_966_25772" x1="30" y1="22" x2="48" y2="3.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9E2C1C"/>
+<stop offset="1" stop-color="#A86D48"/>
+</linearGradient>
+</defs>
+</svg>

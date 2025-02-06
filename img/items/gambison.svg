@@ -1,0 +1,22 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M47 7.83898V41H41H40V42V44C40 45.6569 38.6569 47 37 47H15C13.3431 47 12 45.6569 12 44V42V41H11H5V20.25V7.83898L20 5.19192V7V8H21H31H32V7V5.19192L47 7.83898Z" fill="#A68A61" stroke="black" stroke-width="2"/>
+<path d="M12 30L28 30M12 30L12 41M12 30L12 18" stroke="black" stroke-width="2"/>
+<path d="M40 30L28 30M40 30L40 42M40 30L40 18" stroke="black" stroke-width="2"/>
+<path d="M20 36L20 29.9998L22 29.9998L28 37.9998" stroke="black" stroke-width="2"/>
+<rect opacity="0.3" x="15" y="31" width="2" height="15" fill="black"/>
+<rect opacity="0.3" x="15" y="6" width="2" height="21" fill="black"/>
+<rect opacity="0.3" x="11" y="7" width="2" height="11" fill="black"/>
+<rect opacity="0.3" x="7" y="8" width="2" height="32" fill="black"/>
+<rect opacity="0.3" x="19" y="8" width="2" height="38" fill="black"/>
+<rect opacity="0.3" x="23" y="8" width="2" height="38" fill="black"/>
+<rect opacity="0.3" x="27" y="31" width="2" height="15" fill="black"/>
+<rect opacity="0.3" x="27" y="16" width="2" height="11" fill="black"/>
+<rect opacity="0.3" x="31" y="31" width="2" height="15" fill="black"/>
+<rect opacity="0.3" x="31" y="8" width="2" height="21" fill="black"/>
+<rect opacity="0.3" x="35" y="31" width="2" height="15" fill="black"/>
+<rect opacity="0.3" x="35" y="6" width="2" height="21" fill="black"/>
+<rect x="25" y="7" width="2" height="9" fill="black"/>
+<rect x="21" y="4" width="10" height="3" fill="#746144"/>
+<rect opacity="0.3" x="39" y="7" width="2" height="11" fill="black"/>
+<rect opacity="0.3" x="43" y="8" width="2" height="32" fill="black"/>
+</svg>

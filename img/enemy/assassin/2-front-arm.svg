@@ -1,0 +1,22 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M97 69L96 69L95 66L93 63.5L93 60L96 60L99 60L99 62L100 64L100 67L97 69Z" fill="#7A5F46"/>
+<path d="M100 64L100 67L97 69L96 69L95 66L93 63.5L93 60M100 64L100.938 60L100.938 59M100 64L99 62L99 60M99 60L99 58M99 60L96 60M96 60L96 58L98 58M96 60L93 60M93 60L93 57L95 57" stroke="black" stroke-width="2"/>
+<path d="M111 56H113.853C114.602 56 115.337 56.2107 115.973 56.608L123 61V67L121 69L118 67.5L115 69V72.5L109 83.5V88H103.5L96.5 70L99 66L105 75.5L104 82L107.5 72L109 68L108 61L111 56Z" fill="#7D6147"/>
+<path d="M111 56H113.853C114.602 56 115.337 56.2107 115.973 56.608L123 61V67L121 69L118 67.5L115 69V72.5L109 83.5V88H103.5L96.5 70L99 66L105 75.5L104 82L107.5 72L109 68L108 61L111 56Z" fill="url(#paint0_linear_4115_23922)" fill-opacity="0.6"/>
+<path d="M115 69L116.5 64M115 69L118 67.5L121 69L123 67V61L115.973 56.608C115.337 56.2107 114.602 56 113.853 56H111L108 61L109 68L107.5 72L104 82L105 75.5L99 66L96.5 70L103.5 88H109V83.5L115 72.5V69Z" stroke="black" stroke-width="2"/>
+<path d="M87 69V67L90 65V63" stroke="white" stroke-width="2"/>
+<path d="M87 54V56L90 58V60" stroke="white" stroke-width="2"/>
+<path d="M89 63V60H67L70.5 63H89Z" fill="white"/>
+<path d="M91 67V56H89V67H91Z" fill="white"/>
+<path d="M105 63V60H89V63H105Z" fill="white"/>
+<rect x="95" y="58" width="2" height="4" fill="black"/>
+<rect x="94" y="58" width="2" height="2" fill="black"/>
+<rect x="92" y="60" width="2" height="4" fill="black"/>
+<rect x="98" y="58" width="2" height="4" fill="black"/>
+<defs>
+<linearGradient id="paint0_linear_4115_23922" x1="126.25" y1="59" x2="126.25" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.003 80.749L135.991 80.9063L136.027 81.0596L153.732 155H92.333L113.96 80.7796L114.097 80.3113L113.812 79.9155L105.952 69H136.919L136.003 80.749Z" fill="#404040" stroke="black" stroke-width="2"/>
+<path d="M103 116H135L140 122L152 175H96L103 116Z" fill="#312C4B" stroke="black" stroke-width="2"/>
+<path d="M96.0001 175L103 116H123L123 175H96.0001Z" fill="black" fill-opacity="0.2" stroke="black" stroke-width="2"/>
+<path opacity="0.3" d="M149 192H98L95 176H153L149 192Z" fill="url(#paint0_linear_4059_56034)"/>
+<path d="M123 143.586L125.586 141L123 138.414L120.414 141L123 143.586Z" fill="black" stroke="black" stroke-width="2"/>
+<path d="M123 135.586L125.586 133L123 130.414L120.414 133L123 135.586Z" fill="black" stroke="black" stroke-width="2"/>
+<path d="M123 127.586L125.586 125L123 122.414L120.414 125L123 127.586Z" fill="black" stroke="black" stroke-width="2"/>
+<path d="M124.586 118L121.414 118L123 119.586L124.586 118Z" stroke="black" stroke-width="2"/>
+<path d="M127 157.667L131 160V153H127V157.667Z" fill="#363636"/>
+<path d="M131 160L127 157.667V153H131V160ZM131 160V162H117V165" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_4059_56034" x1="123" y1="176" x2="123" y2="192" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

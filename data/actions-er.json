@@ -1,0 +1,233 @@
+[
+    {
+      "actionName": "shards",
+      "tags": "multistrike, spell",
+      "desc": "deal 3 dmg per empty action slot (cost 1 power)",
+      "passiveStats": "",
+      "actionMod": 3,
+      "actionCharge": 6,
+      "cooldown": "",
+      "keyId": 3,
+      "actionType": ""
+    },
+    {
+      "actionName": "lance",
+      "tags": "spell",
+      "desc": "deal dmg equal to power (cost 1 power, instant)",
+      "passiveStats": "",
+      "actionMod": 2,
+      "actionCharge": 6,
+      "cooldown": "",
+      "keyId": 9,
+      "actionType": "extra-action"
+    },
+    {
+      "actionName": "backstab",
+      "tags": "attack",
+      "desc": "deal 2 dmg, gain 1 power (cost 5 dice roll, instant)",
+      "passiveStats": "",
+      "actionMod": 2,
+      "actionCharge": 12,
+      "cooldown": "",
+      "keyId": 10,
+      "actionType": "extra-action"
+    },
+    {
+      "actionName": "lightning",
+      "tags": "spell",
+      "desc": "deal 1-20 dmg (cost 2 power)",
+      "passiveStats": "",
+      "actionMod": 2,
+      "actionCharge": 3,
+      "cooldown": "",
+      "keyId": 11,
+      "actionType": ""
+    },
+    {
+      "actionName": "fireball",
+      "tags": "attack, spell",
+      "desc": "deal 3 dmg",
+      "passiveStats": "",
+      "actionMod": 3,
+      "actionCharge": 6,
+      "cooldown": "",
+      "keyId": 13,
+      "actionType": ""
+    },
+    {
+      "actionName": "pyroblast",
+      "tags": "spell",
+      "desc": "deal dmg equal to power × dice roll (cost 1 power)",
+      "passiveStats": "",
+      "actionMod": "",
+      "actionCharge": 3,
+      "cooldown": "",
+      "keyId": 14,
+      "actionType": ""
+    },
+    {
+      "actionName": "quick block",
+      "tags": "block, defensive",
+      "desc": "reduce incoming dmg by (12 - dice)",
+      "passiveStats": "",
+      "actionMod": 12,
+      "actionCharge": 12,
+      "cooldown": "",
+      "keyId": 15,
+      "actionType": ""
+    },
+    {
+      "actionName": "barrier",
+      "tags": "block, defensive, spell",
+      "desc": "reduce incoming dmg by 75% (cooldown 3 turns)",
+      "passiveStats": "",
+      "actionMod": 75,
+      "actionCharge": 12,
+      "cooldown": 3,
+      "keyId": 16,
+      "actionType": ""
+    },
+    {
+      "actionName": "combo",
+      "tags": "utility",
+      "desc": "if you rolled 6, perform two actions this turn",
+      "passiveStats": "",
+      "actionMod": "",
+      "actionCharge": "",
+      "cooldown": 1,
+      "keyId": 17,
+      "actionType": "passive"
+    },  
+    {
+      "actionName": "charge",
+      "tags": "utility",
+      "desc": "add 1 action charge to all other actions",
+      "passiveStats": "",
+      "actionMod": 1,
+      "actionCharge": 3,
+      "cooldown": "",
+      "keyId": 20,
+      "actionType": ""
+    },
+    {
+      "actionName": "curse of chain",
+      "tags": "curse, scroll",
+      "desc": "reduce targets dice by 1",
+      "passiveStats": "",
+      "actionMod": 1,
+      "actionCharge": 3,
+      "cooldown": "",
+      "keyId": 23,
+      "actionType": ""
+    },
+    {
+      "actionName": "stun",
+      "tags": "croud control",
+      "desc": "stun target, requires dice roll 1",
+      "passiveStats": "",
+      "actionMod": "",
+      "actionCharge": 12,
+      "cooldown": "",
+      "keyId": 25,
+      "actionType": ""
+    },
+    {
+      "actionName": "shock",
+      "tags": "croud control, spell",
+      "desc": "stun the target (cost 1 power)",
+      "passiveStats": "",
+      "actionMod": "",
+      "actionCharge": 16,
+      "cooldown": "",
+      "keyId": 26,
+      "actionType": ""
+    },
+    {
+      "actionName": "life charge",
+      "tags": "passive",
+      "desc": "adds 10 max life while in action bar",
+      "passiveStats": "life:10",
+      "actionMod": "",
+      "actionCharge": 1,
+      "cooldown": "",
+      "keyId": 27,
+      "actionType": ""
+    },
+    {
+      "actionName": "defence charge",
+      "tags": "passive",
+      "desc": "adds 2 def while in action bar",
+      "passiveStats": "def:2",
+      "actionMod": 2,
+      "actionCharge": 1,
+      "cooldown": "",
+      "keyId": 31,
+      "actionType": ""
+    },
+    {
+      "actionName": "critical hit",
+      "tags": "buff",
+      "desc": "next attack deals 2x dmg, requires dice roll greater than 8",
+      "passiveStats": "",
+      "actionMod": 200,
+      "actionCharge": "",
+      "cooldown": 1,
+      "keyId": 36,
+      "actionType": "passive"
+    },
+    {
+      "actionName": "precision",
+      "tags": "buff",
+      "desc": "your next attack ignores def (cost 1 power, instant)",
+      "passiveStats": "",
+      "actionMod": 1,
+      "actionCharge": 3,
+      "cooldown": "",
+      "keyId": 37,
+      "actionType": "extra-action"
+    },
+    {
+      "actionName": "overload",
+      "tags": "enchantment",
+      "desc": "deal 100% more damage if your dice roll is greater than dice",
+      "passiveStats": "",
+      "actionMod": 100,
+      "actionCharge": "",
+      "cooldown": "",
+      "keyId": 51,
+      "actionType": "passive"
+    },
+    {
+      "actionName": "heal",
+      "tags": "healing",
+      "desc": "restore life equal to 3 + power + def (cost 1 power)",
+      "passiveStats": "",
+      "actionMod": 3,
+      "actionCharge": 12,
+      "cooldown": "",
+      "keyId": 57,
+      "actionType": ""
+    },
+    {
+      "actionName": "punch",
+      "tags": "attack",
+      "desc": "deal 1 dmg",
+      "passiveStats": "",
+      "actionMod": 1,
+      "actionCharge": 1,
+      "cooldown": "",
+      "keyId": 62,
+      "actionType": ""
+    },
+    {
+      "actionName": "melting steel",
+      "tags": "attack, spell",
+      "desc": "deal piercing dmg equal to enemy defence",
+      "passiveStats": "",
+      "actionMod": "",
+      "actionCharge": "",
+      "cooldown": "",
+      "keyId": "",
+      "actionType": ""
+    }
+  ]

@@ -1,0 +1,21 @@
+<svg width="128" height="144" viewBox="0 0 128 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53 80H84L83 63L80 57L83 52L79 33V25H41V41L47 54L39 80H53Z" fill="#364C3C"/>
+<path d="M53 57V80M53 80H84L83 63L80 57L83 52L79 33V25H41V41L47 54L39 80H53Z" stroke="black" stroke-width="2"/>
+<path d="M79 25L70 41M53 57V51.5L70 41M53 25L70 41" stroke="black" stroke-width="2"/>
+<path d="M63 76H58V81H63V76Z" fill="black"/>
+<path d="M72 76H67V81H72V76Z" fill="black"/>
+<path d="M81 76H76V81H81V76Z" fill="black"/>
+<path d="M71.5 54H80V60H71.5L75.5 57L71.5 54Z" fill="#6C6952" stroke="black" stroke-width="2"/>
+<path d="M57.5 54H49V60H57.5L53.5 57L57.5 54Z" fill="#6C6952" stroke="black" stroke-width="2"/>
+<path d="M68.5 54H60V60H68.5L64.5 57L68.5 54Z" fill="#6C6952" stroke="black" stroke-width="2"/>
+<path opacity="0.3" d="M38 97H85V81H37.5L38 97Z" fill="url(#paint0_linear_3511_14527)"/>
+<g style="mix-blend-mode:overlay" opacity="0.2">
+<path d="M41 41V25H54L64 44.5L53 51V53.5L81 44L82.5 53L81 54H60V60L63.5 72L59 80H39L47 55L41 41Z" fill="black"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3511_14527" x1="60" y1="81" x2="60" y2="97" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

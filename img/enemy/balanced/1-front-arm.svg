@@ -1,0 +1,37 @@
+<svg width="240" height="192" viewBox="0 0 240 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M168 110.667L172 113V106H168V110.667Z" fill="#292626"/>
+<path d="M172 113L168 110.667V106H172V113ZM172 113V115H158L154.5 118.5" stroke="black" stroke-width="2"/>
+<rect x="98" y="106" width="70" height="4" fill="#B39568" stroke="black" stroke-width="2"/>
+<path d="M132 59H140L172.5 71L164.5 74.875L168.5 90.75L160.5 90.625L164.5 98.5H145L136 75.2892H132V59Z" fill="#3A2E2E"/>
+<path d="M132 59H140L172.5 71L164.5 74.875L168.5 90.75L160.5 90.625L164.5 98.5H145L136 75.2892H132V59Z" fill="url(#paint0_linear_3573_11075)" fill-opacity="0.6"/>
+<path d="M132 59H140L172.5 71L164.5 74.875L168.5 90.75L160.5 90.625L164.5 98.5H145L136 75.2892H132V59Z" stroke="black" stroke-width="2"/>
+<path d="M137 78V78C145.284 78 152 71.2843 152 63V55H137V78Z" fill="#666060"/>
+<path d="M137 78V78C145.284 78 152 71.2843 152 63V55H137V78Z" fill="black" fill-opacity="0.6"/>
+<path d="M137 78V78C145.284 78 152 71.2843 152 63V55H137V78Z" stroke="black" stroke-width="2"/>
+<path d="M128 69.1205V59H140L168.5 67L160.5 70.875L168.5 82.75L153 84V99L144 84L139 99V84L128 69.1205Z" fill="#952A2A"/>
+<path d="M128 69.1205V59H140L168.5 67L160.5 70.875L168.5 82.75L153 84V99L144 84L139 99V84L128 69.1205Z" fill="url(#paint1_linear_3573_11075)" fill-opacity="0.6"/>
+<path d="M139 84V99L144 84L153 99V84L168.5 82.75L160.5 70.875L168.5 67L140 59H128V69.1205L139 84ZM139 84V75" stroke="black" stroke-width="2"/>
+<rect x="141" y="51" width="2" height="3" fill="black"/>
+<rect x="145" y="51" width="2" height="3" fill="black"/>
+<rect x="149" y="51" width="2" height="3" fill="black"/>
+<rect x="142" y="55" width="10" height="4" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M123 78V78C133.493 78 142 69.4934 142 59V55H127L123 78Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M147 96L139 96L137 108L147 107.999L147 96Z" fill="#666060"/>
+<path d="M147 96L139 96L137 108L147 107.999L147 96Z" fill="white" fill-opacity="0.2"/>
+<path d="M147 96L139 96L137 108L147 107.999L147 96Z" stroke="black" stroke-width="2"/>
+<path d="M151 100L147 97L147.001 106L151 106V100Z" fill="#292626" stroke="black" stroke-width="2"/>
+<path d="M146 91L140 91.0001V96H146L146 91Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M143 104L139 104V112H143L143 104Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M139 104L135 104V112H139L139 104Z" fill="#666060" stroke="black" stroke-width="2"/>
+<path d="M147 104L143 104V110H147L147 104Z" fill="#666060" stroke="black" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_3573_11075" x1="148.25" y1="59" x2="148.25" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3573_11075" x1="148.25" y1="59" x2="148.25" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

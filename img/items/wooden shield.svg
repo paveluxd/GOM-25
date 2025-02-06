@@ -1,0 +1,22 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 11H18V41H14L10 39V11Z" fill="#5D524A" stroke="black" stroke-width="2"/>
+<rect x="18" y="9" width="8" height="34" fill="#5D524A" stroke="black" stroke-width="2"/>
+<rect x="26" y="9" width="8" height="34" fill="#5D524A" stroke="black" stroke-width="2"/>
+<path d="M34 11H42V38L38 41H34V11Z" fill="#5D524A" stroke="black" stroke-width="2"/>
+<rect x="21" y="12" width="2" height="2" fill="black"/>
+<rect x="13" y="14" width="2" height="2" fill="black"/>
+<rect x="29" y="38" width="2" height="2" fill="black"/>
+<rect x="37" y="36" width="2" height="2" fill="black"/>
+<rect x="21" y="38" width="2" height="2" fill="black"/>
+<rect x="13" y="36" width="2" height="2" fill="black"/>
+<rect x="37" y="14" width="2" height="2" fill="black"/>
+<rect x="29" y="12" width="2" height="2" fill="black"/>
+<rect x="14" y="33" width="4" height="8" transform="rotate(-90 14 33)" fill="#5D524A" stroke="black" stroke-width="2"/>
+<rect x="30" y="24" width="4" height="6" transform="rotate(-90 30 24)" fill="#5D524A" stroke="black" stroke-width="2"/>
+<rect x="35" y="27" width="2" height="2" fill="black"/>
+<rect x="29" y="30" width="2" height="2" fill="black"/>
+<path opacity="0.2" d="M11 32H26V23H41V39L35 42H18L11 40V32Z" fill="black"/>
+<g style="mix-blend-mode:color-dodge" opacity="0.05">
+<path d="M41 16H26V19H11V13L17 10H34L41 12V16Z" fill="white"/>
+</g>
+</svg>

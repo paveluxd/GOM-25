@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Babylonian cuneiform numerals", 
+    "year": "2000 BC", 
+    "desc": "Babylonian cuneiform numerals, also used in Assyria and Chaldea, were written in cuneiform, using a wedge-tipped reed stylus to print a mark on a soft clay tablet which would be exposed in the sun to harden to create a permanent record."
+  },
+  {
+    "name": "Algebra",
+    "year": "1650 BC",
+    "desc": "A branch of mathematics that studies algebraic structures and manipulation of statements with such structures. It is a generalization of arithmetic that introduces variables and algebraic operations other than the standard arithmetic operations like addition and multiplication."
+  },
+  {
+    "name": "Pi",
+    "year": "1900-1600 BC",
+    "desc": "The number π is a mathematical constant that is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159. The number π appears in many formulae across mathematics and physics. It is an irrational number, meaning that it cannot be expressed exactly as a ratio of two integers, although fractions such as 22/7 are commonly used to approximate it."
+  },
+  {
+    "name": "Geometry",
+    "year": "2000-1800 BC",
+    "desc": "A branch of mathematics concerned with properties of space such as the distance, shape, size, and relative position of figures.[2] Geometry is, along with arithmetic, one of the oldest branches of mathematics."
+  },
+  {
+    "name": "Thale's theorem",
+    "year": "600 BC",
+    "desc": "states that if A, B, and C are distinct points on a circle where the line AC is a diameter, the angle ∠ ABC is a right angle. Thales's theorem is a special case of the inscribed angle theorem and is mentioned and proved as part of the 31st proposition in the third book of Euclid's Elements.[1] It is generally attributed to Thales of Miletus, but it is sometimes attributed to Pythagoras."
+  },
+  {
+    "name": "Binary numbers",
+    "year": "1600",
+    "desc": "A number expressed in the base-2 numeral system or binary numeral system, a method of mathematical expression which uses only two symbols: typically zero and one."
+  },
+  {
+    "name": "Geometric optics",
+    "year": "280 BC",
+    "desc": "A model of optics that describes light propagation in terms of rays. The ray in geometrical optics is an abstraction useful for approximating the paths along which light propagates under certain circumstances."
+  },
+  {
+    "name": "Optics",
+    "year": "2000 BC",
+    "desc": "A Branch of physics that studies the behaviour and properties of light, including its interactions with matter and the construction of instruments that use or detect it. Optics usually describes the behaviour of visible, ultraviolet, and infrared light."
+  },
+  {
+    "name": "Light",
+    "year": " ",
+    "desc": "A type of electromagnetic radiation, and other forms of electromagnetic radiation such as X-rays, microwaves, and radio waves exhibit similar properties."
+  },
+  {
+    "name": "Statics",
+    "year": "287-212 BC",
+    "desc": "A branch of classical mechanics that is concerned with the analysis of force and torque acting on a physical system that does not experience an acceleration, but rather is in equilibrium with its environment."
+  },
+  {
+    "name": " ",
+    "year": " ",
+    "desc": " "
+  },
+  {
+    "name": " ",
+    "year": " ",
+    "desc": " "
+  },
+  {}
+]

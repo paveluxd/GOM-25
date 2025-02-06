@@ -1,0 +1,43 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_315_143967)">
+<rect x="7" y="7" width="30" height="30" stroke="#1188FF" stroke-width="2"/>
+<rect x="21" y="6" width="2" height="4" fill="#1188FF"/>
+<rect x="6" y="21" width="4" height="2" fill="#1188FF"/>
+<rect x="33" y="21" width="5" height="2" fill="#1188FF"/>
+<rect x="21" y="34" width="2" height="4" fill="#1188FF"/>
+<rect x="21" y="19" width="2" height="6" fill="#1188FF"/>
+<rect x="25" y="21" width="2" height="6" transform="rotate(90 25 21)" fill="#1188FF"/>
+<g clip-path="url(#clip1_315_143967)">
+<rect width="44" height="68" transform="translate(0 -4)" fill="#BE3128"/>
+<rect width="44" height="68" transform="translate(0 -4)" fill="url(#paint0_linear_315_143967)" fill-opacity="0.6"/>
+<path opacity="0.5" d="M6 10H2H-2V63H23V47L15 21L19 7L14 -2V-5H9V-2L14 7L10 15H6L5 14L6 10Z" stroke="black" stroke-width="2"/>
+<path opacity="0.5" d="M10 19H4L1 14V10H-2V59H19V47L10 19Z" stroke="black" stroke-width="2"/>
+<path opacity="0.5" d="M7 23H2L-3 14V10H-6V55H15V47L7 23Z" stroke="black" stroke-width="2"/>
+<path opacity="0.5" d="M4 27H-1L-7 14V10H-10V51H11V47L4 27Z" stroke="black" stroke-width="2"/>
+<path opacity="0.5" d="M1 31H-5V47H6L1 31Z" stroke="black" stroke-width="2"/>
+<path d="M-2 35H-5V43H0L-2 35Z" stroke="black" stroke-width="2"/>
+<path d="M12 40L56 4V20L12 40Z" fill="white" stroke="black" stroke-width="2"/>
+<path d="M21 40L60 29V50H41V43L33 46V43L21 40Z" fill="#570000" fill-opacity="0.61" stroke="black" stroke-width="2"/>
+<path d="M17 30L21 13L23 15H25V7L28 9L31 -8L31.8889 0H33.8889L38 -17L41 -7L45 -17H52V-7L17 30Z" fill="#570000" fill-opacity="0.61" stroke="black" stroke-width="2"/>
+<rect y="26" width="2" height="2" fill="black"/>
+<rect x="3" y="22" width="2" height="2" fill="black"/>
+<rect x="5" y="18" width="2" height="2" fill="black"/>
+<rect x="7" y="14" width="2" height="2" fill="black"/>
+<rect y="5" width="2" height="2" fill="black"/>
+<path opacity="0.5" d="M7 10H-2V6H5L7 10Z" stroke="black" stroke-width="2"/>
+</g>
+<rect x="1" y="1" width="42" height="42" stroke="black" stroke-opacity="0.4" stroke-width="2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_315_143967" x1="22" y1="0" x2="22" y2="68" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF0000"/>
+<stop offset="1" stop-color="#FF0000" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_315_143967">
+<rect width="44" height="44" fill="white"/>
+</clipPath>
+<clipPath id="clip1_315_143967">
+<rect width="44" height="68" fill="white" transform="translate(0 -4)"/>
+</clipPath>
+</defs>
+</svg>

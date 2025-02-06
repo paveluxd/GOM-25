@@ -1,0 +1,53 @@
+:root {
+    --green:          rgb(0, 240, 96);
+    --orange:         rgb(255, 102, 54);
+    --yellow:         rgb(255,230,0);
+    
+    --grey:           rgb(126, 126, 126);
+    --map-frame:      rgba(0, 0, 0, .15);
+    --dungeon-border: rgba(255, 255, 255, .10);
+
+    --black:     rgb(0, 0, 0);
+    --b80:       rgb(0, 0, 0, .8);
+    --b50:       rgb(0, 0, 0, .5);
+    --b20:       rgb(0, 0, 0, .2);
+    --b10:       rgb(0, 0, 0, .1);
+
+    --white:     rgb(255, 255, 255);
+    --w80:       rgb(255, 255, 255, .80);
+    --w70:       rgb(255, 255, 255, .70);
+    --w50:       rgb(255, 255, 255, .50);
+    --w30:       rgb(255, 255, 255, .30);
+    --w20:       rgb(255, 255, 255, .20);
+    --w10:       rgb(255, 255, 255, .10);
+    --w0:        rgb(255, 255, 255, 0);
+
+    /* Map */
+    --stage-bg-1:    #646562;
+    --stage-bg-2:    #BFBFBF;
+    --stage-bg-3:    #747474;
+
+    --shadow: 2px 2px 4px var(--b20);
+
+    --screen-ref-width:      320px;
+    --item-card-max-width:   320px;
+    --action-card-max-width: 172px;
+
+    /* TYPOGRAPHY */
+    --heading-yellow: #F6C57B;
+    --body-text:      rgba(255, 255, 255, 0.8);
+
+    /* SCREEN */
+    --screen-bg:        #181818;
+
+    /* TREE */
+    --tree-rows:      9;
+    --tree-columns:   29;
+    --tree-cell:      64px;
+
+    /* BUTTON */
+    --btn-size:       52px;
+    --btn-bg:         #2F3138;
+    --btn-bg-hover:   #23242b;
+    --btn-border:     #949494;
+}

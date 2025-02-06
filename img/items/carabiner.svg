@@ -1,0 +1,24 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 23V20L17 16.5V9H11C9.89543 9 9 9.89543 9 11V26H17V21" stroke="black" stroke-width="2"/>
+<path d="M39 25L37 25L37 21L41 21L41 25L39 25ZM39 25L39 30" stroke="black" stroke-width="2"/>
+<path d="M39 33L37 33L37 29L41 29L41 33L39 33ZM39 33L39 38" stroke="black" stroke-width="2"/>
+<path d="M39 37L37 37L37 41L41 41L41 37L39 37ZM39 37L39 32" stroke="black" stroke-width="2"/>
+<path d="M13 30L11 30L11 34L15 34L15 30L13 30ZM13 30L13 25" stroke="black" stroke-width="2"/>
+<path d="M43 9H45C46.1046 9 47 9.89543 47 11V21" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M40 47H33C31.8954 47 31 46.1046 31 45V29" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M9 43H7C5.89543 43 5 42.1046 5 41V31" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M9 43H11C12.1046 43 13 42.1046 13 41V37" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M43 9H41C39.8954 9 39 9.89543 39 11V17" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M18 43H17C14.7909 43 13 41.2091 13 39V33" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M8 38H9C11.2091 38 13 36.2091 13 34V33" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M12 5H19C20.1046 5 21 5.89543 21 7V29" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M21 29V43C21 44.1046 21.8954 45 23 45H24C25.1046 45 26 44.1046 26 43V29" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M26 29V9C26 7.89543 26.8954 7 28 7H29C30.1046 7 31 7.89543 31 9V29" stroke="#D08328" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M38 47H45C46.1046 47 47 46.1046 47 45V19" stroke="#D05028" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M34 12H37C38.1046 12 39 12.8954 39 14V20" stroke="#D05028" stroke-opacity="0.8" stroke-width="2"/>
+<path d="M14 5H7C5.89543 5 5 5.89543 5 7V33" stroke="#D05028" stroke-opacity="0.8" stroke-width="2"/>
+<rect x="44" y="21" width="4" height="2" fill="#D97353"/>
+<rect x="14" y="35" width="2" height="2" fill="#D99B53"/>
+<rect x="4" y="29" width="4" height="2" fill="#D97353"/>
+<path d="M39 22L39 18C39 16.8954 38.1046 16 37 16L34 16" stroke="#D08328" stroke-width="2"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.1" width="24" height="69" transform="matrix(1 0 0 -1 48 120)" fill="url(#paint0_linear_4041_17058)"/>
+<path d="M83 99H80M83 99H86M83 99V107" stroke="black" stroke-width="2"/>
+<path d="M37 99H34M37 99H40M37 99V107" stroke="black" stroke-width="2"/>
+<path d="M49 120L49 68.3333L49 58" stroke="#373735" stroke-width="2"/>
+<path d="M71 94L71 71.5L71 67" stroke="#373735" stroke-width="2"/>
+<rect x="67" y="115" width="5" height="2" fill="#373735"/>
+<rect x="72" y="118" width="5" height="2" fill="#3A3A38"/>
+<rect x="43" y="118" width="5" height="2" fill="#3A3A38"/>
+<rect x="70" y="112" width="2" height="8" fill="#373735"/>
+<rect x="49" y="113" width="6" height="8" transform="rotate(-90 49 113)" fill="#172801" fill-opacity="0.24" stroke="black" stroke-width="2"/>
+<rect x="49" y="101" width="6" height="8" transform="rotate(-90 49 101)" fill="#172801" fill-opacity="0.24" stroke="black" stroke-width="2"/>
+<rect x="49" y="89" width="6" height="8" transform="rotate(-90 49 89)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="57" y="113" width="6" height="8" transform="rotate(-90 57 113)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="54" y="83" width="6" height="9" transform="rotate(-90 54 83)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="57" y="101" width="6" height="8" transform="rotate(-90 57 101)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect width="6" height="5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 71 89)" fill="#172801" fill-opacity="0.24" stroke="black" stroke-width="2"/>
+<rect x="49" y="107" width="6" height="5" transform="rotate(-90 49 107)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="49" y="83" width="6" height="5" transform="rotate(-90 49 83)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="62" y="107" width="6" height="9" transform="rotate(-90 62 107)" fill="#172801" fill-opacity="0.24" stroke="black" stroke-width="2"/>
+<rect x="62" y="95" width="6" height="9" transform="rotate(-90 62 95)" fill="black" fill-opacity="0.4" stroke="black" stroke-width="2"/>
+<rect x="67" y="76" width="5" height="2" fill="#373735"/>
+<rect x="67" y="70" width="5" height="2" fill="#373735"/>
+<rect x="48" y="70" width="5" height="2" fill="#373735"/>
+<defs>
+<linearGradient id="paint0_linear_4041_17058" x1="12" y1="0" x2="12" y2="69" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

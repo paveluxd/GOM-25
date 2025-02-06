@@ -1,0 +1,60 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="86" y="60" width="2" height="14" fill="#464745"/>
+<rect opacity="0.5" x="88" y="72" width="2" height="2" fill="#464745"/>
+<rect opacity="0.5" x="88" y="65" width="2" height="2" fill="#464745"/>
+<rect opacity="0.3" x="80" y="60" width="2" height="5" fill="black"/>
+<rect opacity="0.3" x="76" y="58" width="14" height="2" fill="black"/>
+<path d="M54 31H88" stroke="black" stroke-width="2"/>
+<path d="M71 15L85 31V53H57V31L71 15Z" fill="#613D3D" stroke="black" stroke-width="2"/>
+<path d="M71 35L85 51V53H57V51L71 35Z" fill="#F6F0DD" stroke="black" stroke-width="2"/>
+<path opacity="0.1" d="M56 82H86V106H56V82Z" fill="url(#paint0_linear_825_46476)"/>
+<rect x="57" y="51" width="28" height="24" fill="#F6F0DD" stroke="black" stroke-width="2"/>
+<path d="M62 26H66V33H62V26Z" fill="#F6F0DD" stroke="black" stroke-width="2"/>
+<rect width="4" height="4" transform="matrix(1 0 0 -1 62 26)" fill="#2D2D2D" stroke="black" stroke-width="2"/>
+<path d="M57 75H85V81H57V75Z" fill="#898989" stroke="black" stroke-width="2"/>
+<path d="M71 16V36" stroke="black" stroke-width="2"/>
+<path d="M58 59H84" stroke="#A63200" stroke-opacity="0.34" stroke-width="2"/>
+<path d="M71 75L71 37" stroke="#A63200" stroke-opacity="0.34" stroke-width="2"/>
+<path d="M58 67H84" stroke="#A63200" stroke-opacity="0.34" stroke-width="2"/>
+<path d="M66 67H76" stroke="black" stroke-width="2"/>
+<path d="M54 51H88" stroke="black" stroke-width="2"/>
+<path d="M54 75L88 75" stroke="black" stroke-width="2"/>
+<rect x="69" y="59" width="4" height="8" fill="#81A0C5" stroke="black" stroke-width="2"/>
+<rect opacity="0.2" x="60" y="78" width="2" height="2" fill="black"/>
+<rect opacity="0.2" x="64" y="78" width="2" height="2" fill="black"/>
+<rect opacity="0.2" x="68" y="78" width="2" height="2" fill="black"/>
+<rect opacity="0.2" x="72" y="78" width="2" height="2" fill="black"/>
+<rect opacity="0.2" x="76" y="78" width="2" height="2" fill="black"/>
+<rect opacity="0.2" x="80" y="78" width="2" height="2" fill="black"/>
+<rect x="61" y="34" width="4" height="2" fill="black"/>
+<rect x="61" y="36" width="2" height="2" fill="black"/>
+<path d="M71 46V52" stroke="black" stroke-width="2"/>
+<path d="M10 50H14M20 56V50M20 50V46M20 50H14M20 46V40M20 46H25M30 46H25M20 40H14M20 40V35M20 35H27M20 35V32M20 32H15M20 32V26V23M14 50V45M25 46V42" stroke="black" stroke-width="2"/>
+<path opacity="0.2" d="M10 62H14M20 56V62M20 62V66M20 62H14M20 66V72M20 66H25M30 66H25M14 62V67M25 66V70" stroke="url(#paint1_linear_825_46476)" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.055 81C13.0186 80.8353 13 80.6685 13 80.5C13 77.4624 19.0442 75 26.5 75C33.9558 75 40 77.4624 40 80.5C40 80.6685 39.9814 80.8353 39.945 81H40L39.9372 81.0338C39.4411 83.1324 36.0504 84.8862 31.4112 85.6247L27 88L22.5122 85.7561C17.4023 85.1133 13.5881 83.2678 13.0621 81.0311L13 81H13.055Z" fill="url(#paint2_linear_825_46476)" fill-opacity="0.2"/>
+<path d="M31 59.9167L26 50L21.5 59H23L17 69H19L14 76C14 76.6566 14.3233 77.3068 14.9515 77.9134C15.5797 78.52 16.5004 79.0712 17.6612 79.5355C18.8219 79.9998 20.1999 80.3681 21.7165 80.6194C23.233 80.8707 24.8585 81 26.5 81C28.1415 81 29.767 80.8707 31.2835 80.6194C32.8001 80.3681 34.1781 79.9998 35.3388 79.5355C36.4996 79.0712 37.4203 78.52 38.0485 77.9134C38.6767 77.3068 39 76.6566 39 76L33 68H35L29.5 59.9167H31Z" fill="#605237" stroke="black" stroke-width="2"/>
+<rect opacity="0.2" width="2" height="4" transform="matrix(-1 0 0 1 29 72)" fill="black"/>
+<rect width="2" height="4" transform="matrix(-1 0 0 1 34 78)" fill="#605237"/>
+<rect x="16" y="77" width="2" height="4" fill="#605237"/>
+<rect x="18" y="77" width="2" height="4" fill="black"/>
+<rect x="30" y="78" width="2" height="4" fill="black"/>
+<rect opacity="0.2" width="2" height="4" transform="matrix(-1 0 0 1 27 68)" fill="black"/>
+<rect x="89" y="104" width="2" height="4" transform="rotate(-180 89 104)" fill="black" fill-opacity="0.2"/>
+<rect x="85" y="104" width="2" height="4" transform="rotate(-180 85 104)" fill="black" fill-opacity="0.2"/>
+<rect x="81" y="104" width="2" height="4" transform="rotate(-180 81 104)" fill="black" fill-opacity="0.2"/>
+<rect x="97" y="83" width="2" height="4" transform="rotate(-180 97 83)" fill="black" fill-opacity="0.2"/>
+<defs>
+<linearGradient id="paint0_linear_825_46476" x1="71" y1="82" x2="71" y2="106" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_825_46476" x1="20" y1="69.5" x2="20" y2="56.0001" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint2_linear_825_46476" x1="26.5" y1="75" x2="26.5" y2="88" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

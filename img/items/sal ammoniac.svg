@@ -1,0 +1,44 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29 23L33 21H41L45 23V43H29V23Z" fill="#D9D9D9" fill-opacity="0.3" stroke="#AFBDC5" stroke-width="2"/>
+<path d="M30 30H44V42H30V30Z" fill="url(#paint0_linear_717_44580)"/>
+<rect x="7" y="7" width="18" height="38" rx="2" fill="url(#paint1_linear_717_44580)" stroke="black" stroke-width="2"/>
+<path d="M23 25V22H7V25" stroke="black" stroke-width="2"/>
+<path d="M19 25V22H11V25" stroke="black" stroke-width="2"/>
+<path d="M6 18L26 18" stroke="#EEE2A3" stroke-width="2"/>
+<path d="M6 26L26 26" stroke="#EEE2A3" stroke-width="2"/>
+<rect x="33" y="17" width="8" height="4" fill="#D9D9D9" fill-opacity="0.3" stroke="#AFBDC5" stroke-width="2"/>
+<rect x="35" y="13" width="4" height="4" fill="#AFBDC5" stroke="#AFBDC5" stroke-width="2"/>
+<g opacity="0.8">
+<rect x="42" y="28" width="2" height="2" fill="#D9D9D9"/>
+<rect x="30" y="26" width="4" height="2" fill="white"/>
+<rect x="38" y="26" width="4" height="2" fill="white"/>
+<rect x="34" y="28" width="4" height="2" fill="white"/>
+<rect x="38" y="30" width="4" height="2" fill="white"/>
+<rect x="42" y="32" width="2" height="2" fill="white"/>
+<rect x="34" y="32" width="4" height="2" fill="white"/>
+<rect x="30" y="30" width="4" height="2" fill="white"/>
+</g>
+<g opacity="0.8">
+<rect x="38" y="34" width="4" height="2" fill="#D9D9D9"/>
+<rect x="34" y="36" width="4" height="2" fill="#D9D9D9"/>
+<rect x="38" y="38" width="4" height="2" fill="#D9D9D9"/>
+<rect x="42" y="40" width="2" height="2" fill="#D9D9D9"/>
+<rect x="30" y="38" width="4" height="2" fill="#D9D9D9"/>
+<rect x="42" y="36" width="2" height="2" fill="#D9D9D9"/>
+</g>
+<rect x="32" y="12" width="10" height="2" fill="#AFBDC5"/>
+<rect x="34" y="16" width="2" height="2" fill="white"/>
+<rect x="34" y="12" width="2" height="2" fill="white"/>
+<rect x="34" y="20" width="2" height="2" fill="white"/>
+<rect x="36" y="18" width="2" height="2" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_717_44580" x1="37" y1="30" x2="37" y2="42" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD600"/>
+<stop offset="1" stop-color="#F46F24" stop-opacity="0.99"/>
+</linearGradient>
+<linearGradient id="paint1_linear_717_44580" x1="16" y1="7" x2="16" y2="45" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D0BB6D"/>
+<stop offset="1" stop-color="#826952"/>
+</linearGradient>
+</defs>
+</svg>
