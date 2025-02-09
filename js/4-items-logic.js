@@ -33,9 +33,9 @@ class ItemObj {
             {key:'desc'          ,val: undefined},
 
             //New props
-            {key:'actionType'    ,val: undefined},
-            {key:'actionValue'   ,val: undefined},
-            {key:'chargeTime'    ,val: undefined},
+            {key:'actionType'    ,val: ''},
+            {key:'actionValue'   ,val: ''},
+            {key:'chargeTime'    ,val: ''},
             {key:'chargeCounter' ,val: 0},
         ]
         //Resolve props via default value above, or value from itemsRef object
