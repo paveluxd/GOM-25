@@ -55,7 +55,7 @@ let config = {
 }
 
 // Test config
-if(1 == 2){
+if(1 == 1){
     // config.life = 110
     config.power = 0
     config.def   = 0
@@ -64,27 +64,22 @@ if(1 == 2){
     config.class = 'guardian'
     config.coins = 90
 
-    //Progression
+    // Progression
     config.basePassieSkillPoints = 9
 
-    //Game
-    config.showScreen        = 'map' 
+    // Game
+    config.showScreen        = 'map'
     if(config.showScreen    == 'combat'){config.testCombat = true} //Initiates combat at the start (for testing).
     config.clearLs           = true
     config.showCombatInfoLog = true
     // config.stage             = 1
     config.skipTutorial      = true
 
-    //Starting items
+    // Starting items
     config.stGuardian = [
             'club',
-            'pendant',
-            'bag',
-            'spiked shield',
-            'gonfalon',
-            'poison potion',
-            'gambison',
-            'robe'
+            // 'wooden staff',
+            // 'shield'
     ]
     config.stCrusader = [
         'sword',

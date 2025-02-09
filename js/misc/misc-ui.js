@@ -1,6 +1,6 @@
 //UI
     function syncUi(){
-        console.log(`UI sync`)
+        // console.log(`UI sync`)
 
         syncActionTiles()
         syncCharPage()
@@ -20,7 +20,6 @@
                 //Player stats
                 el('p-life' ).innerHTML =`${gs.plObj.life}`
                 el('p-def'  ).innerHTML =`${gs.plObj.def}`
-                el('p-dice' ).innerHTML =`${gs.plObj.roll}<span>/${gs.plObj.dice}</span>`
                 el('p-power').innerHTML =`${gs.plObj.power}`  
 
                 //Life progress bar indication
@@ -52,70 +51,62 @@
                 //Enemy stats
                     // console.log(gs.enObj.action);
                     el('e-life').innerHTML    =`${gs.enObj.life}`
-                    
-                    //Block indicator
-                    if(gs.enObj.action.key != 'block'){
-                        el('e-def').innerHTML =`${gs.enObj.def}`
-                    } else {
-                        el('e-def').innerHTML =`${gs.enObj.def}<span>(${gs.enObj.action.actionVal})</span>`
-                    }
-
-                    el('e-dice').innerHTML    =`${gs.enObj.roll}<span>/${gs.enObj.dice}</span>`
+                    el('e-def').innerHTML =`${gs.enObj.def}`
                     el('e-power').innerHTML   =`${gs.enObj.power}`
 
                 //Enemy intent indicator
-                    el('intent').innerHTML = `${gs.enObj.action.desc} <p id="status-fx"></p>`
+                //     el('intent').innerHTML = `${gs.enObj.action.desc} <p id="status-fx"></p>`
 
-                    if(gs.enObj.action.key == 'sleep'){ //Sleep
-                        el('status-fx').innerHTML += `
-                            <span id='action-tag'>
-                                Will idle 
-                            </span>
-                        `
-                    }else if(gs.enObj.action.key == 'combo'){ //Combo
-                        el('status-fx').innerHTML += `
-                            <span id='action-tag'>
-                                Multistrike x3
-                            </span>
-                        `
-                    }else if(gs.enObj.action.key == 'charge'){ //Charge
-                        el('status-fx').innerHTML += `
-                            <span id='action-tag'>
-                                ${gs.enObj.action.actionVal} turns
-                            </span>
-                        `
-                    }
-
-                    if(gs.enObj.reflect){ //Reflect
-                        el('status-fx').innerHTML += `
-                            <span id='reflect-tag'>
-                                Reflects ${gs.enObj.dice}+
-                            </span>
-                        `
-                    }
-                    if(gs.enObj.bannedAction != undefined){ //Banned action
-                        el('status-fx').innerHTML += `
-                            <span id='ban-tag'>
-                                Can't ${gs.enObj.bannedAction}
-                            </span>
-                        `
-                    }
-                    if(gs.enObj.poisonStacks > 0){ //Poison
-                        el('status-fx').innerHTML += `
-                            <span id='poison-tag'>
-                                <img src='./img/ico/poison.svg'>
-                                ${gs.enObj.poisonStacks} 
-                            </span>
-                        `
-                    }
-                    if(gs.enObj.burnStacks > 0){ //Burn
-                        el('status-fx').innerHTML += `
-                            <span id='burn-tag'>
-                                <img src='./img/ico/burn.svg'>
-                                ${gs.enObj.burnStacks} 
-                            </span>
-                        `
-                    }
+                    // if(gs.enObj.action.key == 'sleep'){ //Sleep
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='action-tag'>
+                    //             Will idle
+                    //         </span>
+                    //     `
+                    // }else if(gs.enObj.action.key == 'combo'){ //Combo
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='action-tag'>
+                    //             Multistrike x3
+                    //         </span>
+                    //     `
+                    // }else if(gs.enObj.action.key == 'charge'){ //Charge
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='action-tag'>
+                    //             ${gs.enObj.action.actionVal} turns
+                    //         </span>
+                    //     `
+                    // }
+                    //
+                    // if(gs.enObj.reflect){ //Reflect
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='reflect-tag'>
+                    //             Reflects ${gs.enObj.dice}+
+                    //         </span>
+                    //     `
+                    // }
+                    // if(gs.enObj.bannedAction != undefined){ //Banned action
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='ban-tag'>
+                    //             Can't ${gs.enObj.bannedAction}
+                    //         </span>
+                    //     `
+                    // }
+                    // if(gs.enObj.poisonStacks > 0){ //Poison
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='poison-tag'>
+                    //             <img src='./img/ico/poison.svg'>
+                    //             ${gs.enObj.poisonStacks}
+                    //         </span>
+                    //     `
+                    // }
+                    // if(gs.enObj.burnStacks > 0){ //Burn
+                    //     el('status-fx').innerHTML += `
+                    //         <span id='burn-tag'>
+                    //             <img src='./img/ico/burn.svg'>
+                    //             ${gs.enObj.burnStacks}
+                    //         </span>
+                    //     `
+                    // }
             }
 
         //Modify map stat indicator

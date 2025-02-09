@@ -33,7 +33,7 @@
                 //Unlock screen
                 document.body.classList.remove('lock-actions', 'darken')
 
-                //Set custom stage for testing
+                //Set a custom stage for testing
                 if(config.stage != undefined){
                     gs.stage = config.stage
                 }
@@ -86,26 +86,29 @@
             resetFlatStats()
 
         //4.Generates enemy
-            gs.enObj = new EnemyObj //New enemy per fight 
+            gs.enObj = new EnemyObj //New enemy per fight
+            //Add weapon to ene
+            addItem("club", undefined, "enemy")
+            console.log(gs.enObj)
 
             //PASSIVE: combat start passives
-            resolveStartOfCombatPassives()
+            // resolveStartOfCombatPassives()
 
-            genEneAction()          //Gen before player turn and after. Do it at this stage because it references gs.enObj.
+            // Create enemy sprite
             spriteBuilder('enemy')
         
         //Check if player has a weapon
-            checkIfPlayerCanAttack()
+        //     checkIfPlayerCanAttack()
 
         //Reset once per combat passives
-            gs.plObj.treeNodes.forEach(node => {
-                node.activated = false
-            }) 
+        //     gs.plObj.treeNodes.forEach(node => {
+        //         node.activated = false
+        //     })
 
         //5.Roll player dice. Roll after stats if dice will be changed.
             gs.plObj.roll = rng(gs.plObj.dice)
             //PASSIVE: post roll passives.
-            resolvePostRollPassives()
+            // resolvePostRollPassives()
 
         //6.syncUI() will generate action cards that will trigger turnCalc().
             syncUi()
@@ -121,114 +124,156 @@
 
         //7.Open combat screen
             screen("combat")
+
+
+        // LOOP
+        combatLoop()
+        
+
+        
+    }
+
+    //0.COMBAT LOOP
+    let runCombatLoop // Var to stop the loop after combatEndCheck()
+    function combatLoop(){
+
+        runCombatLoop = true;
+
+        const intervalId = setInterval(() => {
+
+            //Stop combat loop
+            if (!runCombatLoop) {
+                clearInterval(intervalId); // Stops the interval if the condition is met
+                console.log("Loop stopped");
+                return;
+            }
+
+            // Reset enemy state.
+            gs.enObj.state = ''
+
+            // Increase turn counter.
+            gs.combatTurn++
+
+            turnCalc()
+
+        }, 1000);
     }
 
     //0.START OF THE TURN
     function startNextTurn(){
         console.log('Next turn');
 
-         //POISON: resolve poison stacks
-            resolvePoison()
+        //POISON: resolve poison stacks
+        //    resolvePoison()
         
         //BURN
-            resolveBurn()
-                    
-         //Check if player can attack (check for punch)
-             checkIfPlayerCanAttack()
+        //     resolveBurn()
+                
+        //Check if player can attack (check for punch)
+        //     checkIfPlayerCanAttack()
 
-         //ROLL: player turn roll
-             gs.plObj.roll = rng(gs.plObj.dice) + gs.plObj.rollBonus
+        //ROLL: player turn roll
+        //     gs.plObj.roll = rng(gs.plObj.dice) + gs.plObj.rollBonus
 
-         //COODLOWN: increase turn cooldowns
-             resolveCooldowns()
+        //COODLOWN: increase turn cooldowns
+        //     resolveCooldowns()
 
-         //PASSIVE: post roll passives.
-             resolvePostRollPassives()
+        //PASSIVE: post roll passives.
+        //     resolvePostRollPassives()
 
-         gs.plObj.rollBonus = 0                                    // Remove any roll bonuses.
-         genEneAction()                                            // Gen enemy action.
-         gs.enObj.state = ''                                       // Reset enemy state.
-         gs.combatTurn++                                           // Increase turn counter.
+        // Remove any roll bonuses.
+        // gs.plObj.rollBonus = 0
+        // Gen enemy action.
+        // genEneAction()
+
+
     }
 
-    //1.TURN CALC (ALL ITEMS)
+    //1.TURN CALC (triggered from loop)
         function turnCalc(buttonElem){
             
             setRandomGhostImages()
             resetCombatStateVariables()
 
+            //Identify player item
+            let equippedItems = gs.plObj.inventory.filter(item => item.equipped === true);
+            itemTriggerLoop(equippedItems, gs.plObj)
+
+            itemTriggerLoop(gs.enObj.inventory, gs.enObj)
+
+
+            //Same for enemy
+
             //Save players previous action.
-            if(gs.sourceAction !== undefined){
-                gs.previousAction = gs.sourceAction 
-            }
+            // if(gs.sourceAction !== undefined){
+            //     gs.previousAction = gs.sourceAction 
+            // }
 
             //Find used action -> trigger action effect method
-            gs.sourceAction = findObj(gs.plObj.actions, 'actionId', buttonElem.getAttribute('actionId')) //Get action id from button elem
+            //Get action id from button elem
+            // gs.sourceAction = findObj(gs.plObj.actions, 'actionId', buttonElem.getAttribute('actionId'))
 
             //Find item by action
-            gs.sourceItem = findItemByAction(gs.sourceAction)
+            // gs.sourceItem = findItemByAction(gs.sourceAction)
 
             //Add action to combat log
-            gs.logMsg.push(`${gs.sourceAction.actionName}: ${gs.sourceAction.desc}.<br>`)
+            // gs.logMsg.push(`${gs.sourceAction.actionName}: ${gs.sourceAction.desc}.<br>`)
 
             //Action logic
-            actionLogic[gs.sourceAction.keyId]()  
+            // actionLogic[gs.sourceAction.keyId]()
 
             //PASSIVES post-action: Player passive effects.
-            gs.plObj.actions.forEach(action => {
-                if      (action.keyId == 'a17'){ // combo "gloves"
-                    if(gs.plObj.roll === 6 && action.cooldown > 0){
-
-                        gs.combatTurnState = 'extra-action'
-                        action.cooldown = 0
-
-                    }
-                }else if(action.keyId == 'a36'){ // critical hit "woolen gloves"
-                    if(gs.plObj.roll > 8 && action.cooldown > 0){
-
-                        gs.plObj.dmgDone = gs.plObj.dmgDone * (action.actionMod/100)
-                        action.cooldown = 0
-
-                    }
-                }else if(action.keyId == 'a51'){ // overload 'exoskeleton'
-                    if(gs.plObj.roll > gs.plObj.dice){
-
-                        gs.plObj.dmgDone = gs.plObj.dmgDone * (action.actionMod / 100 + 1)
-
-                    }
-                }else if(action.keyId == 'a56'){ // sigil of light
-
-                    if(gs.plObj.life + gs.lifeRestoredByPlayer <= gs.plObj.flatLife) return
-
-                    //Mod max life
-                    gs.plObj.flatLife += action.actionMod
-                    gs.plObj.flatLifeMod += action.actionMod
-                }
-            })
-            
-            //LOGIC: enemy
-            enemyActionLogic()
+            // gs.plObj.actions.forEach(action => {
+            //     if      (action.keyId == 'a17'){ // combo "gloves"
+            //         if(gs.plObj.roll === 6 && action.cooldown > 0){
+            //
+            //             gs.combatTurnState = 'extra-action'
+            //             action.cooldown = 0
+            //
+            //         }
+            //     }else if(action.keyId == 'a36'){ // critical hit "woolen gloves"
+            //         if(gs.plObj.roll > 8 && action.cooldown > 0){
+            //
+            //             gs.plObj.dmgDone = gs.plObj.dmgDone * (action.actionMod/100)
+            //             action.cooldown = 0
+            //
+            //         }
+            //     }else if(action.keyId == 'a51'){ // overload 'exoskeleton'
+            //         if(gs.plObj.roll > gs.plObj.dice){
+            //
+            //             gs.plObj.dmgDone = gs.plObj.dmgDone * (action.actionMod / 100 + 1)
+            //
+            //         }
+            //     }else if(action.keyId == 'a56'){ // sigil of light
+            //
+            //         if(gs.plObj.life + gs.lifeRestoredByPlayer <= gs.plObj.flatLife) return
+            //
+            //         //Mod max life
+            //         gs.plObj.flatLife += action.actionMod
+            //         gs.plObj.flatLifeMod += action.actionMod
+            //     }
+            // })
 
             //PASSIVES: work for both player and enemy.
-            gs.plObj.actions.forEach(action => {
-                if (action.keyId === 'a43'){ // throns crown
-                    if(gs.enObj.dmgDone !== undefined){
-                        gs.enObj.dmgDone = gs.enObj.dmgDone * 2
-                    }
-                    if(gs.plObj.dmgDone !== undefined){
-                        gs.plObj.dmgDone = gs.plObj.dmgDone * 2
-                    }
-                }
-            })
+            // gs.plObj.actions.forEach(action => {
+            //     if (action.keyId === 'a43'){ // throns crown
+            //         if(gs.enObj.dmgDone !== undefined){
+            //             gs.enObj.dmgDone = gs.enObj.dmgDone * 2
+            //         }
+            //         if(gs.plObj.dmgDone !== undefined){
+            //             gs.plObj.dmgDone = gs.plObj.dmgDone * 2
+            //         }
+            //     }
+            // })
 
             //Dmg and heal calc.
             combatCalc() 
 
             //Redses AC of used action.
-            resolveCharge(gs.sourceAction)
+            // resolveCharge(gs.sourceAction)
 
             //COMBAT LOG: Print all combat logs.
-            gs.logMsg.forEach(msg => {console.log(`${upp(msg)}`)})
+            // gs.logMsg.forEach(msg => {console.log(`${upp(msg)}`)})
 
             //Check if anyone is dead -> next turn
             combatEndCheck()     
@@ -245,11 +290,50 @@
             el('e-ghost').setAttribute('style',`transform: scale(-1, 1);`) //flip ene
             runAnim(el(`p-ghost`), 'ghost-trigger')
             runAnim(el('e-ghost'), 'ghost-trigger')
-
-            //Dice roll animation
-            runAnim(el('p-dice-icon'), 'roll-dice')
-            runAnim(el('e-dice-icon'), 'roll-dice')
         }
+
+        //Item trigger loop
+        function itemTriggerLoop(equippedItems, target){
+            // Loop that checks and updates items in sequence
+            for (const item of equippedItems) {
+
+                // Check if the chargeCounter is less than chargeTime
+                if(item.chargeTime > item.chargeCounter){
+
+                    item.chargeCounter++
+                    console.log(`${item.chargeCounter} / ${item.chargeTime}`)
+
+                    //Check if item triggered
+                    if(item.chargeTime === item.chargeCounter){
+
+                        //Trigger action
+                        //Action logic
+                        if(item.actionType === "attack"){
+                            target.dmgDone = item.actionValue
+                        }
+                        else if (item.actionType === "gain def"){
+                            target.def += item.actionValue
+                        }
+                        else if (item.actionType === "gain power"){
+                            target.power += item.actionValue
+                        }
+
+                        console.log(item.itemName + " triggered.")
+
+                        //Check if it was last item triggered and reset charge counters for all to reset the loop
+                        if(item === equippedItems[equippedItems.length - 1]){
+                            equippedItems.forEach(item => {
+                                item.chargeCounter = 0
+                            })
+                        }
+                    }
+
+                    // Exit the loop because the first item with a difference was found
+                    break;
+                }
+            }
+        }
+        
         //Damage calculation.
         function combatCalc(){    
 
@@ -282,24 +366,24 @@
                 
                 //DEF: resolve.                    
                     //Def break logic
-                    if(gs.sourceAction.tags.includes('breaks def') && gs.enObj.def > 0){
-                        
-                        changeStat('def', -gs.plObj.dmgDone, 'enemy')
-                        
-                        //Deal no dmg if def was broken
-                        gs.plObj.dmgDone = gs.enObj.def
-                        
-                    }else if(gs.enObj.def > 0){
-                        //Reduce dmg by def
-                        //Def break dmg should not be reduced by def
-                        gs.plObj.dmgDone -= gs.enObj.def
-                        
-                        //Reduce def on hit
-                        changeStat('def', -1, 'enemy')
-                        
-                    }else if(gs.enObj.def < 0){
-                        gs.plObj.dmgDone -= gs.enObj.def
-                    }
+                    // if(gs.sourceAction.tags.includes('breaks def') && gs.enObj.def > 0){
+                    //
+                    //     changeStat('def', -gs.plObj.dmgDone, 'enemy')
+                    //
+                    //     //Deal no dmg if def was broken
+                    //     gs.plObj.dmgDone = gs.enObj.def
+                    //
+                    // }else if(gs.enObj.def > 0){
+                    //     //Reduce dmg by def
+                    //     //Def break dmg should not be reduced by def
+                    //     gs.plObj.dmgDone -= gs.enObj.def
+                    //
+                    //     //Reduce def on hit
+                    //     changeStat('def', -1, 'enemy')
+                    //
+                    // }else if(gs.enObj.def < 0){
+                    //     gs.plObj.dmgDone -= gs.enObj.def
+                    // }
 
                     //Set positive damage to 0 (if def is greater than dmg)
                     if(gs.plObj.dmgDone < 0){
@@ -308,19 +392,19 @@
                     
                 
                 //PASSIVES CHECK: oh-hit passies
-                    resolveOnHitPassives()
+                //     resolveOnHitPassives()
 
                 //Resolve stat change
                     changeStat('life', -gs.plObj.dmgDone, 'enemy') 
                 //Resolve reflect
-                    if(gs.enObj.reflect > 0 && gs.plObj.dmgDone > gs.enObj.dice){
-                        //Math floor because it's a negative number
-                        //Ceil to round down
-                        changeStat('life', Math.ceil(-gs.plObj.dmgDone * (gs.enObj.reflect / 100)), 'player') 
-                    }          
+                //     if(gs.enObj.reflect > 0 && gs.plObj.dmgDone > gs.enObj.dice){
+                //         //Math floor because it's a negative number
+                //         //Ceil to round down
+                //         changeStat('life', Math.ceil(-gs.plObj.dmgDone * (gs.enObj.reflect / 100)), 'player')
+                //     }
 
                 //Reset piercing buff after attack was performed
-                    gs.plObj.piercing = false
+                //     gs.plObj.piercing = false
             }
 
             //ENE DMG
@@ -336,54 +420,14 @@
                 }
 
                 //Resolve enemy actions
-                if      (['attack', 'crit', 'charged strike'].indexOf(gs.enObj.action.key) > -1){
+                resolveOnHitDef()
 
-                    resolveOnHitDef()
+                //Check for damage cap
+                gs.enObj.dmgDone = resolveDmgCap(gs.enObj.dmgDone)
 
-                    //Check for damage cap
-                    gs.enObj.dmgDone = resolveDmgCap(gs.enObj.dmgDone)
+                //Resolve dmg
+                changeStat('life', -gs.enObj.dmgDone, 'player')
 
-                    //Resolve dmg
-                    changeStat('life', -gs.enObj.dmgDone, 'player')
-
-                }else if(['combo'].indexOf(gs.enObj.action.key) > -1){
-
-                    let totalDmgTaken = 0
-
-                    for (let i = 0; i < 3; i ++){
-
-                        //Move to a diff var due to def reducing dmg done 3 times
-                        let playerDamageTaken = gs.enObj.dmgDone
-
-                        resolveOnHitDef()
-
-                        //Set positive damage to 0
-                        if (playerDamageTaken < 0){
-                            playerDamageTaken = 0
-                        } 
-                        
-                        totalDmgTaken += playerDamageTaken
-                    }
-                    
-                    //Required for reflect passive
-                    gs.enObj.dmgDone = totalDmgTaken * -1
-
-                    //Check for damage cap
-                    totalDmgTaken = resolveDmgCap(totalDmgTaken)
-                    
-                    //Resolve dmg
-                    changeStat('life', -totalDmgTaken, 'player')
-
-                }else if(['final strike'].indexOf(gs.enObj.action.key) > -1 && gs.enObj.life < 0){ //final strike only works if enemy is dead.
-                    
-                    resolveOnHitDef()
-
-                    //Check for damage cap
-                    gs.enObj.dmgDone = resolveDmgCap(gs.enObj.dmgDone)
-                    
-                    //Resolve dmg
-                    changeStat('life', -gs.enObj.dmgDone, 'player')
-                }
                 resolveAfterBeingHit()
             }
 
@@ -456,7 +500,7 @@
                 //Set positive damage to 0
                 if (gs.enObj.dmgDone < 0){
                     gs.enObj.dmgDone = 0
-                } 
+                }
             }
             function resolveDmgCap(dmgValue){
                 let dmg = dmgValue
@@ -505,18 +549,23 @@
             }
 
     //2.END TURN
-        function combatEndCheck(mode){ 
+        function combatEndCheck(mode){
+
             //DEFEAT
                 //On death passives
+                // if(gs.plObj.life < 1){
+                //     resolveOnDeathPassives() //adds 1 life
+                // }
                 if(gs.plObj.life < 1){
-                    resolveOnDeathPassives() //adds 1 life
-                }
-                if(gs.plObj.life < 1){
+                    runCombatLoop = false;
+
                     clearSavedGame()
                     openStateScreen('game-end')
                 }
+
             //VICTORY
                 else if (gs.enObj.life < 1){
+                    runCombatLoop = false;
 
                     //End game screen stat counter
                     gs.enemyCounter++
@@ -566,27 +615,31 @@
                         //Save game on win
                         saveGame()
                     }
+
                     //Next fight
                     else{
-
+                        console.log('combat ended')
                         if(typeof gs.encounter == 'number'){
                             gs.encounter++ 
                         }
 
-                        initiateCombat()
-                        runAnim(el('enemy-sprite'), 'enemyEntrance')
+                        setTimeout(() => {
+                            initiateCombat();
+                            runAnim(el('enemy-sprite'), 'enemyEntrance')
+                        }, 2000);
                     }     
 
                     //Remove cooldowns from all items
-                    resolveCooldowns('reset')
+                    // resolveCooldowns('reset')
                 }
+
             //NEXT TURN
-                else if (
-                    mode != 'preventNextTurn' 
-                 && gs.sourceAction.actionType !== "extra-action"
-                ){
-                    startNextTurn() 
-                }
+            //     else if (
+            //         mode != 'preventNextTurn'
+            //      && gs.sourceAction.actionType !== "extra-action"
+            //     ){
+            //         startNextTurn()
+            //     }
         }
         function resolveCooldowns(mode){
             if(mode == 'reset'){
@@ -768,7 +821,7 @@
 
 //Load data
     let gs         // game state object
-    let itemsRef   // atems data
+    let itemsRef   // items data
     let actionsRef // actions data
     let actionLogic = new ActionLogic
 

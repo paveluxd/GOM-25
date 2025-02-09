@@ -22,15 +22,21 @@ class ItemObj {
 
         //Gen variable properties
         let props = [
-            {key:'itemName'    ,val: upp(itemName)},
-            {key:'itemSlot'    ,val: 'any'},
-            {key:'tags'        ,val: ''},
-            {key:'itemRarity'  ,val: 'common'},
-            {key:'itemId'      ,val: "it" + Math.random().toString(8).slice(2)},//gens unique id
-            {key:'equipped'    ,val: false},
-            {key:'passiveStats',val: []},
-            {key:'cost'        ,val: rng(12, 6)},
-            {key:'desc'        ,val: undefined}
+            {key:'itemName'      ,val: upp(itemName)},
+            {key:'itemSlot'      ,val: 'any'},
+            {key:'tags'          ,val: ''},
+            {key:'itemRarity'    ,val: 'common'},
+            {key:'itemId'        ,val: "it" + Math.random().toString(8).slice(2)},//gens unique id
+            {key:'equipped'      ,val: false},
+            {key:'passiveStats'  ,val: []},
+            {key:'cost'          ,val: rng(12, 6)},
+            {key:'desc'          ,val: undefined},
+
+            //New props
+            {key:'actionType'    ,val: undefined},
+            {key:'actionValue'   ,val: undefined},
+            {key:'chargeTime'    ,val: undefined},
+            {key:'chargeCounter' ,val: 0},
         ]
         //Resolve props via default value above, or value from itemsRef object
         props.forEach(property => {
@@ -53,7 +59,7 @@ class ItemObj {
         this.enhancementQuantity = 0 //Increases cost per enhancement.
         this.repairQuantity = 0
 
-        //Resolve actions
+        // Resolve actions
         if(itemData.actions.length == 0 || itemData.actions == undefined){
             itemData.actions = []
         }
@@ -63,14 +69,14 @@ class ItemObj {
             })    
         }
 
-        //Corruption modifier
+        // Corruption modifier
         if(type == 'corrupted'){
             let randomAction = new ActionObj(rarr(actionsRef).actionName)
             this.actions.push(randomAction)
         }
     }
 }
-//Calc equipped items
+// Calc equipped items
 function calcEquippedItems(){
     let equipped = 0
     gs.plObj.inventory.forEach(item => {
@@ -81,7 +87,7 @@ function calcEquippedItems(){
 
     return equipped
 }
-//Calculates cost for ench repair etc.
+// Calculates cost for ench repair etc.
 function calcCost(type, itemId){
     let targetItem = findItemById(itemId)
     let cost
@@ -117,8 +123,8 @@ function genItemPool(){
 
 
 
-//ACTIONS
-    //Resolve action charges
+// ACTIONS 
+    // Resolve action charges 
     function resolveCharge(action){
 
         //On action use passives
@@ -157,7 +163,7 @@ function genItemPool(){
             resolvePlayerStats()  
         }
     }
-    //Resolve post-roll passives
+    // Resolve post-roll passives
     function resolvePostRollPassives(){
         gs.plObj.actions.forEach(action => {
             if     (action.keyId == 'a58'){ // power surge
@@ -187,7 +193,7 @@ function genItemPool(){
 
 
 //Dealing with offered items
-    //Gen list
+    //Gen list 
     function genOfferedItemList(quant, event) {
         // console.log(quant,event);
 
@@ -248,7 +254,7 @@ function genItemPool(){
         }
 
     }
-    //Resolve
+    // Resolve
     function resolveChoosingOfferedItem(itemId, event){   
 
         //Find item with matching id
@@ -298,7 +304,7 @@ function genItemPool(){
 
 //ITEMS
     //Add item (to player inventory based on arguments).
-    function addItem(key, iLvl){
+    function addItem(key, iLvl, target){
 
         //Check if there are slots in the inventory.
         if(gs.plObj.inventory.length < gs.plObj.inventorySlots){
@@ -315,7 +321,12 @@ function genItemPool(){
             }
 
             //Add item to the inventory.
-            gs.plObj.inventory.push(newItem)
+            if(target == 'enemy'){
+                gs.enObj.inventory.push(newItem)
+
+            }else{
+                gs.plObj.inventory.push(newItem)
+            }
 
             //Resolve stats and actions added by item?
             // resolvePlayerStats()
@@ -325,7 +336,7 @@ function genItemPool(){
             showAlert('Inventory is full.')
         }
     }
-    //Equip/unequip item.
+    //Equip/unequip item. 
     function equipUnequipItem(itemId){
 
         //Find item by id
@@ -362,7 +373,7 @@ function genItemPool(){
         resolvePlayerStats()//Adjust this to recalc all items
         syncUi()
     }
-    //Remove/drop item (inventory).
+    //Remove/drop item (inventory). 
     function removeItem(itemId){
         let item = findByProperty(gs.plObj.inventory, 'itemId', itemId)
         
@@ -582,9 +593,12 @@ function genItemPool(){
                     actionSet += `${upp(action.desc)} (passive).`
                 }
                 else {
-                    actionSet += `${upp(action.actionName)} (x${action.actionCharge}) - ${upp(action.desc)}.<br>`
+                    actionSet += `
+                        ${upp(item.actionType)} (${item.actionValue}).<br>
+                        Charge time: ${item.chargeTime} seconds.
+                    `
                 }
-            }) 
+            })
 
             //Passive stats
             let passiveSet = ``

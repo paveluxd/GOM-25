@@ -326,17 +326,6 @@
                         <!-- Player stat section --> 
                         <div class="stat-group">
                             <div class="stat">
-                                <img id="p-dice-icon" src="./img/ico/dice.svg">
-                                <div id="p-dice"></div>
-                                <div id="p-diceChange" class="floater"></div>
-                                <div id="p-rollChange" class="floater"></div>
-                            </div>
-                            <div class="stat">
-                                <img src="./img/ico/power.svg">
-                                <div id="p-power"></div>
-                                <div id="p-powerChange" class="floater"></div>
-                            </div>
-                            <div class="stat">
                                 <img id="p-life-icon" src="./img/ico/life.svg">
                                 <div id="p-life"></div>
                                 <div id="p-lifeChange" class="floater"></div>
@@ -346,6 +335,13 @@
                                 <div id="p-def"></div>
                                 <div id="p-defChange" class="floater"></div>
                             </div>
+                            <div class="stat">
+                                <img src="./img/ico/power.svg">
+                                <div id="p-power"></div>
+                                <div id="p-powerChange" class="floater"></div>
+                            </div>
+
+
                         </div>
 
                     </div>
@@ -357,24 +353,13 @@
                         <div id="enemy-sprite"></div>
 
                         <!-- UI:Enemy intent indicator -->
-                        <div id="intent-indicator">
-                            <div id="intent" class="body-14"></div>
-                            <svg><polygon points="0,0 12,0 6,6"/></svg>
-                        </div>
+<!--                        <div id="intent-indicator">-->
+<!--                            <div id="intent" class="body-14"></div>-->
+<!--                            <svg><polygon points="0,0 12,0 6,6"/></svg>-->
+<!--                        </div>-->
 
                         <!-- Enemy stat section -->
                         <div class="stat-group">
-                            <div class="stat">
-                                <img id="e-dice-icon" src="./img/ico/dice.svg" alt="">
-                                <div id="e-dice"></div>
-                                <div id="e-diceChange" class="floater"></div>
-                                <div id="e-rollChange" class="floater"></div>
-                            </div>
-                            <div class="stat">
-                                <img src="./img/ico/power.svg" alt="">
-                                <div id="e-power"></div>
-                                <div id="e-powerChange" class="floater"></div>
-                            </div>
                             <div class="stat">
                                 <img id="e-life-icon" src="./img/ico/life.svg" alt="">
                                 <div id="e-life"></div>
@@ -385,6 +370,12 @@
                                 <div id="e-def"></div>
                                 <div id="e-defChange" class="floater"></div>
                             </div>
+                            <div class="stat">
+                                <img src="./img/ico/power.svg" alt="">
+                                <div id="e-power"></div>
+                                <div id="e-powerChange" class="floater"></div>
+                            </div>
+
                             <!-- <div id="poison-stat" class="stat hide">
                                 <img src="./img/ico/poison.svg" alt="">
                                 <div id="e-poison">0</div>
@@ -656,19 +647,19 @@
     </div>
 </body>
 
-<script src="./js/utility.js"></script>
-<script src="./js/config.js"></script>
-<script src="./js/data.js"></script>
-<script src="./js/misc-ui.js"></script>
+<script src="js/misc/utility.js"></script>
+<script src="js/misc/config.js"></script>
+<script src="js/misc/data.js"></script>
+<script src="js/misc/misc-ui.js"></script>
 <script src="./js/map.js"></script>
 
 <script src="./js/tree.js"></script>
-<script src="./js/items-logic.js"></script>
-<script src="./js/actions-logic.js"></script>
-<script src="./js/enemy.js"></script>
-<script src="./js/player.js"></script>
+<script src="js/4-items-logic.js"></script>
+<script src="js/5-actions-logic.js"></script>
+<script src="js/2-enemy.js"></script>
+<script src="js/3-player.js"></script>
 
-<script src="./js/game-logic.js"></script>
+<script src="js/1-game-logic.js"></script>
 
 <script src="./js/dragsroll-library/dragscroll.js"></script>
 </html>

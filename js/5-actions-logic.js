@@ -608,20 +608,17 @@
         //Find action in actionsRef
         let referenceAction = findByProperty(actionsRef, 'keyId', action.keyId);
 
-        //Create button elem.
-        let button = document.createElement('button')
-        if(type != 'card'){
-            button.setAttribute('onclick', `turnCalc(this)`) // On click run next turn
-        }
+        //Create tile elem.
+        let actionTile = document.createElement('div')
 
         //Add a unique id.
-        button.setAttribute('actionId', action.actionId)       
-        button.classList.add('action')
+        actionTile.setAttribute('actionId', action.actionId)
+        actionTile.classList.add('action')
         
         
         //Updates button labels based on actions
         //Modifies 'content' section
-        button.append(content) //Add content section to button
+        actionTile.append(content) //Add content section to button
 
         //!!! REPACE WITH keyID
 
@@ -629,8 +626,6 @@
         //If item does not exist, use placeholder image
         let itemString
         let itemRef = findItemByAction(action)
-
-        // console.log(action);
 
         if (action.keyId == 'a62'){//punch
             itemString = 'punch'
@@ -649,18 +644,14 @@
             itemString = 'curse scroll'
         }
 
-        //Cooldonw management.
+        // Cooldown management.
         let cooldownCounter = ``
 
-        //If action is on cooldown disable the button.
-        if(typeof action.cooldown != 'undefined' && action.cooldown < referenceAction.cooldown){
-            cooldownCounter = `<p class='cooldown-indicator'>Recharge: ${referenceAction.cooldown - action.cooldown} turn(s)</p>` 
-            button.disabled = true
-        }
-
-
         let heading = `${upp(action.actionName)}`
-        let desc = `${upp(action.desc)}`
+        let desc = `
+            ${upp(itemRef.actionType)} (${itemRef.actionValue}).<br>
+            Charge time: ${itemRef.chargeTime} seconds.
+        `
 
         //Rewrites headings for calc
         //See if you can merge it all with action obj/functions
@@ -697,16 +688,17 @@
             }
         }
 
-        button.querySelector('section').innerHTML = `
+        // <p class="charge-indicator">x${action.actionCharge}</p>
+
+        actionTile.querySelector('section').innerHTML = `
             <span>
                 <h3>${heading}</h3> 
-                <p class="charge-indicator">x${action.actionCharge}</p>
                 ${cooldownCounter}
             </span>
-            <p class='desc'>${desc}.</p>
+            <p class='desc'>${desc}</p>
             <img src="./img/items/${itemString}.svg">
         `
-        return button
+        return actionTile
     }
 
     function resolveEndOfCombatPassiveActions(){
