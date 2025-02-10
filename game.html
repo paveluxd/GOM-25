@@ -50,7 +50,7 @@
     <link rel="apple-touch-icon"      sizes="180x180"    href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"      href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16"      href="./favicon/favicon-16x16.png">
-    <link rel="manifest"                                 href="./favicon/site.webmanifest">
+<!--    <link rel="manifest"                                 href="./favicon/site.webmanifest">-->
     <link rel="mask-icon"                                href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -346,7 +346,7 @@
 
                     </div>
                 </div>
-        
+
                 <!-- Enemy -->
                 <div id="e-img-column" class="column">
                     <div class="imgcont">
@@ -383,15 +383,17 @@
                             </div> -->
                         </div>
 
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="playerActionContainer" class="actions-container scroll ">
-            <div id="cards-row"></div>
+        <div id="actionsWrapper">
+            <div id="plActionsContainer"></div>
+            <div id="enActionsContainer"></div>
         </div>
-  
+
+
     </div>
 
 <!-- INFO: Combat guide page -->
@@ -649,17 +651,19 @@
 
 <script src="js/misc/utility.js"></script>
 <script src="js/misc/config.js"></script>
-<script src="js/misc/data.js"></script>
+<script src="js/misc/game-object.js"></script>
 <script src="js/misc/misc-ui.js"></script>
-<script src="./js/map.js"></script>
 
-<script src="./js/tree.js"></script>
-<script src="js/4-items-logic.js"></script>
-<script src="js/5-actions-logic.js"></script>
-<script src="js/2-enemy.js"></script>
-<script src="js/3-player.js"></script>
+<script src="js/secondary/map.js"></script>
+<script src="js/secondary/tree.js"></script>
 
-<script src="js/1-game-logic.js"></script>
+<script src="js/4-item-logic.js"></script>
+<script src="js/5-action-logic.js"></script>
+<script src="js/3-enemy.js"></script>
+<script src="js/2-player.js"></script>
+
+<script src="js/1-combat-logic.js"></script>
+<script src="js/misc/0-initiate-load-game.js"></script>
 
 <script src="./js/dragsroll-library/dragscroll.js"></script>
 </html>

@@ -9,7 +9,7 @@ class MapObj{
 
         //Pick map profile
         gs.mapProfile = mapProfileRef[`stage${gs.stage}`]
-        if(type == 'village'){
+        if(type === 'village'){
             gs.mapProfile = mapProfileRef[`village`]
         }
 
@@ -25,7 +25,7 @@ class MapObj{
         
 
         //Set map dimensions
-        if(gs.mapProfile.size == undefined){
+        if(gs.mapProfile.size === undefined){
             gs.mapProfile.size = mapProfileRef.referenceMap.size
         }
 
@@ -35,7 +35,7 @@ class MapObj{
 
 
         //Dungeon setup
-        if(type == 'dungeon'){
+        if(type === 'dungeon'){
             this.xAxis = 3
             this.yAxis = rng(3 + gs.stage, 3)
 
@@ -48,7 +48,7 @@ class MapObj{
             tileSetBase   = 'empty-1, empty-2, empty-3'.split(', ')
             forests       = ''.split(', ')
         }
-        else if (type == 'village'){
+        else if (type === 'village'){
             //Set map dimensions
             this.xAxis = gs.mapProfile.size[0] //+ gs.stage
             this.yAxis = gs.mapProfile.size[1] //+ gs.stage
@@ -158,7 +158,7 @@ class MapObj{
                 ]
 
             //Dungeon overrides
-                if(type == 'dungeon'){
+                if(type === 'dungeon'){
                     overrides = [
                         {//Player (adds dungeon exit)
                             tileId:`${Math.round(this.xAxis/2)}-${this.yAxis}`,
@@ -175,7 +175,7 @@ class MapObj{
                     ]
                 }
             //Village overrides
-                else if(type == 'village'){
+                else if(type === 'village'){
                     overrides = [
                         {//Player starting tile
                             tileId:`${Math.round(this.xAxis/2)}-${this.yAxis}`, 
@@ -195,7 +195,7 @@ class MapObj{
                     ]
 
                     //Add 1 enemy unit for the 1st stage
-                    if(gs.stage == 0){
+                    if(gs.stage === 0){
                         overrides = [
                             {//Player starting tile
                                 tileId:`${Math.round(this.xAxis/2)}-${this.yAxis}`, 
@@ -218,7 +218,7 @@ class MapObj{
 
             //Adds mandatory tiles from config
                 config.mandatoryTiles.forEach(tile => {
-                    if(type == 'dungeon') return //why dungeon was excluded?
+                    if(type === 'dungeon') return //why dungeon was excluded?
                     overrides.push(tile) //add mandatory tile to required tiles arr
                 })
 
@@ -392,7 +392,7 @@ class MapObj{
                 tile.playerUnit = false
             }
             //remove enemy unit from target tile
-            else if(tile.tileId == elem.id){ 
+            else if(tile.tileId == elem.id){
                 tile.playerUnit = true
             }
         })
@@ -486,7 +486,7 @@ class MapObj{
                 tile.tileId == `${tileIdRef[0]+1}-${tileIdRef[1]+1}` ||
                 tile.tileId == `${tileIdRef[0]-1}-${tileIdRef[1]-1}` ||
                 tile.tileId == `${tileIdRef[0]+1}-${tileIdRef[1]-1}` ||
-                tile.tileId == `${tileIdRef[0]-1}-${tileIdRef[1]+1}`    
+                tile.tileId == `${tileIdRef[0]-1}-${tileIdRef[1]+1}`
             ){
                 //Clear all events
                 el(tile.tileId).removeAttribute("onmousedown")

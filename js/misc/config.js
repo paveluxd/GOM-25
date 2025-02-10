@@ -6,9 +6,8 @@ let config = {
         life:      60, //40
         power:      0,
         def:        0,
-        dice:       6,
         inventory: 40,
-        slots:      5,
+        slots:      3,
         class:      'guardian',
         coins:      12,
         food:       30,
@@ -21,6 +20,7 @@ let config = {
 
     //Game
         fadeTime: 400,
+        intervalSpeed: 100, //in ms
 
     //Starting items
         stGuardian: [
@@ -29,11 +29,11 @@ let config = {
         ],
         stCrusader: [
             'sword',
-            'bandages',
+            'shield',
         ],
         stWanderer: [
-            'bow',
-            'cape',
+            'dagger',
+            'shield',
         ],
         
 
@@ -55,12 +55,11 @@ let config = {
 }
 
 // Test config
-if(1 == 1){
+if(1 === 1){
     // config.life = 110
     config.power = 0
     config.def   = 0
-    config.dice  = 6
-    config.slots = 20
+    config.slots = 3
     config.class = 'guardian'
     config.coins = 90
 
@@ -69,17 +68,17 @@ if(1 == 1){
 
     // Game
     config.showScreen        = 'map'
-    if(config.showScreen    == 'combat'){config.testCombat = true} //Initiates combat at the start (for testing).
-    config.clearLs           = true
+    if(config.showScreen   === 'combat'){config.testCombat = true} //Initiates combat at the start (for testing).
+    config.clearLs           = false
     config.showCombatInfoLog = true
-    // config.stage             = 1
+    // config.stage             = 2
     config.skipTutorial      = true
 
     // Starting items
     config.stGuardian = [
-            'club',
+            'sword',
             // 'wooden staff',
-            // 'shield'
+            'shield'
     ]
     config.stCrusader = [
         'sword',

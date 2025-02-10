@@ -45,13 +45,22 @@
         let gameObj = JSON.parse(localStorage.getItem('gameState'))
 
         if (gameObj == undefined){
-            console.log('New game started');
+            console.log('New game started.');
         }
         else if(gameObj.version !== config.version){
-            console.log('Version diff');
+            console.log('Version diff.');
         }
         else {
             gs = gameObj
-            console.log('Game loaded');
+
+            //Redeclare item actions to recreate methods
+            let placeholderInventory = gs.plObj.inventory
+            gs.plObj.inventory = []
+
+            placeholderInventory.forEach(item =>{
+               addItem(item.itemName, item.iLvl, gs.plObj.inventory)
+            })
+
+            console.log('Game loaded.');
         }
     }

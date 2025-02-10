@@ -1,42 +1,7 @@
 [
   {
     "itemName": "club",
-    "actions": "club attack",
-    "passiveStats": "",
-    "itemSlot": "",
-    "tags": "weapon",
-    "desc": "",
-    "itemRarity": "",
-
-    "actionType": "attack",
-    "actionValue": 3,
-    "chargeTime": 1
-  },
-  {
-    "itemName": "wooden staff",
-    "actions": "focus",
-    "passiveStats": "",
-    "itemSlot": "",
-    "tags": "weapon",
-    "desc": "",
-    "itemRarity": "",
-
-    "actionType": "gain power",
-    "actionValue": 1,
-    "chargeTime": 4
-  },
-  {
-    "itemName": "hammer",
-    "actions": "armor break",
-    "passiveStats": "",
-    "itemSlot": "",
-    "tags": "weapon",
-    "desc": "",
-    "itemRarity": ""
-  },
-  {
-    "itemName": "mace",
-    "actions": "mace attack",
+    "actions": "club",
     "passiveStats": "",
     "itemSlot": "",
     "tags": "weapon",
@@ -45,16 +10,7 @@
   },
   {
     "itemName": "dagger",
-    "actions": "cut",
-    "passiveStats": "",
-    "itemSlot": "",
-    "tags": "weapon",
-    "desc": "",
-    "itemRarity": ""
-  },
-  {
-    "itemName": "dagger pair",
-    "actions": "dagger attack",
+    "actions": "dagger",
     "passiveStats": "",
     "itemSlot": "",
     "tags": "weapon",
@@ -63,26 +19,44 @@
   },
   {
     "itemName": "sword",
-    "actions": "sword attack",
+    "actions": "sword",
     "passiveStats": "",
     "itemSlot": "",
     "tags": "weapon",
     "desc": "a weapon shaped by the forgotten age. Wield it as a silent hymn to the lost glories of previous owners, its edge is a faithful companion in a world longing for heroes",
     "itemRarity": ""
   },
+
+  {
+    "itemName": "great hammer",
+    "actions": "great hammer",
+    "passiveStats": "",
+    "itemSlot": "",
+    "tags": "weapon",
+    "desc": "a weapon shaped by the forgotten age. Wield it as a silent hymn to the lost glories of previous owners, its edge is a faithful companion in a world longing for heroes",
+    "itemRarity": ""
+  },
+
   {
     "itemName": "shield",
-    "actions": "block",
+    "actions": "shield",
     "passiveStats": "",
     "itemSlot": "",
     "tags": "off-hand",
     "desc": "common in the early Middle Ages, round shields featured resilient wood. Enhanced with metal, the shield's design, allows to deflect incoming blows",
-    "itemRarity": "",
-
-    "actionType": "gain def",
-    "actionValue": 3,
-    "chargeTime": 3
+    "itemRarity": ""
   },
+
+  {
+    "itemName": "staff",
+    "actions": "staff",
+    "passiveStats": "",
+    "itemSlot": "",
+    "tags": "weapon",
+    "desc": "",
+    "itemRarity": ""
+  },
+
   {
     "itemName": "plate armor",
     "actions": "",
@@ -110,6 +84,7 @@
     "desc": "",
     "itemRarity": ""
   },
+
   {
     "itemName": "woolen bag",
     "actions": "",
@@ -136,14 +111,5 @@
     "tags": "bag",
     "desc": "",
     "itemRarity": "magic"
-  },
-  {
-    "itemName": "bandages",
-    "actions": "bandage wounds",
-    "passiveStats": "",
-    "itemSlot": "",
-    "tags": "consumable",
-    "desc": "",
-    "itemRarity": ""
   }
 ]

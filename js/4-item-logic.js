@@ -1,12 +1,13 @@
 //Items
 class ItemObj {
     constructor(itemName, iLvl, type){
+        // console.log(`>>> ${itemName} ${iLvl} ${type} generated.`)
 
         //Static properties taken from reference.
         this.actions = []
 
         //If no itemName -> get random
-        if(itemName == undefined){
+        if(itemName === undefined){
             itemName = rarr(genItemPool()).itemName
         }
 
@@ -14,11 +15,11 @@ class ItemObj {
         let itemData = findByProperty(itemsRef, 'itemName', itemName)
         
         //Set iLvl to stage val
-        if(iLvl === undefined && gs !== undefined){
-            iLvl = gs.stage
+        if(iLvl !== undefined){
+            this.iLvl = iLvl
         }else{
-            iLvl = 1
-        } 
+            this.iLvl = gs.stage
+        }
 
         //Gen variable properties
         let props = [
@@ -31,15 +32,10 @@ class ItemObj {
             {key:'passiveStats'  ,val: []},
             {key:'cost'          ,val: rng(12, 6)},
             {key:'desc'          ,val: undefined},
-
-            //New props
-            {key:'actionType'    ,val: ''},
-            {key:'actionValue'   ,val: ''},
-            {key:'chargeTime'    ,val: ''},
-            {key:'chargeCounter' ,val: 0},
         ]
         //Resolve props via default value above, or value from itemsRef object
         props.forEach(property => {
+            // console.log(itemName)
 
             //if no prop, set it to extra props value
             if(itemData[property.key] === undefined || itemData[property.key] === ''){
@@ -60,18 +56,18 @@ class ItemObj {
         this.repairQuantity = 0
 
         // Resolve actions
-        if(itemData.actions.length == 0 || itemData.actions == undefined){
+        if(itemData.actions.length === 0){
             itemData.actions = []
         }
         else{
             itemData.actions.forEach(actionKey => {
-                this.actions.push(new ActionObj(actionKey))
+                this.actions.push(new ActionObj(actionKey, this))
             })    
         }
 
         // Corruption modifier
-        if(type == 'corrupted'){
-            let randomAction = new ActionObj(rarr(actionsRef).actionName)
+        if(type === 'corrupted'){
+            let randomAction = new ActionObj(rarr(actionsRef).actionName, this)
             this.actions.push(randomAction)
         }
     }
@@ -160,7 +156,7 @@ function genItemPool(){
             }
 
             //Loose passive stat
-            resolvePlayerStats()  
+            resolveStats(gs.plObj)  
         }
     }
     // Resolve post-roll passives
@@ -214,8 +210,9 @@ function genItemPool(){
                 //Add card to container
                 el('merchant-container').append(rewardElem)
             })
-        }else{
+        }
 
+        else{
             //Gen item per quant value in function
             for(i = 0; i < quant; i++){ 
                 // console.log(gs.enObj.profile);
@@ -263,7 +260,7 @@ function genItemPool(){
             if(targetItem.itemId == undefined || targetItem.itemId != itemId) return false
 
             //If no slots return
-            if(gs.plObj.inventory.length == gs.plObj.inventorySlots){ 
+            if(gs.plObj.inventory.length == gs.plObj.inventorySlots){
                 showAlert('No inventory slots.') 
                 return
             }
@@ -304,7 +301,7 @@ function genItemPool(){
 
 //ITEMS
     //Add item (to player inventory based on arguments).
-    function addItem(key, iLvl, target){
+    function addItem(itemName, iLvl, targetArr){
 
         //Check if there are slots in the inventory.
         if(gs.plObj.inventory.length < gs.plObj.inventorySlots){
@@ -313,23 +310,18 @@ function genItemPool(){
             // console.log(key);
 
             //Create new item obj
-            let newItem = new ItemObj(key, iLvl)
+            let newItem = new ItemObj(itemName, iLvl)
 
-            //If empty equippment slots, equip item automatically.
+            //If empty equipment slots, equip item automatically.
             if(gs.plObj.equipmentSlots > calcEquippedItems()){
                 newItem.equipped = true
             }
 
-            //Add item to the inventory.
-            if(target == 'enemy'){
-                gs.enObj.inventory.push(newItem)
-
-            }else{
-                gs.plObj.inventory.push(newItem)
-            }
+            //Add item.
+            targetArr.push(newItem)
 
             //Resolve stats and actions added by item?
-            // resolvePlayerStats()
+            // resolveStats(gs.plObj)
         }
 
         else{
@@ -359,8 +351,10 @@ function genItemPool(){
         {
             item.equipped = true
         } 
+        
+        
         //Unequip item
-        else if (item.equipped == true){
+        else if (item.equipped === true){
             item.equipped = false
         }
         else if(itemSlots.includes(item.itemSlot)){
@@ -370,7 +364,7 @@ function genItemPool(){
             showAlert('No equippment slots.')
         }
 
-        resolvePlayerStats()//Adjust this to recalc all items
+        resolveStats(gs.plObj)//Adjust this to recalc all items
         syncUi()
     }
     //Remove/drop item (inventory). 
@@ -440,7 +434,7 @@ function genItemPool(){
                 //Increase ench quant to increase cost per enhant of the same item.
                 targetItem.enhancementQuantity++
 
-            resolvePlayerStats()//Recalculates passive stats
+            resolveStats(gs.plObj)//Recalculates passive stats
         }
         else if(type == 'repair'){
             //Find 1st action
@@ -494,6 +488,23 @@ function genItemPool(){
             })
 
         })
+
+        //Check enemy items if player is undefined
+        if(itemWihtAction == undefined){
+            gs.enObj.inventory.forEach(item => {
+
+                item.actions.forEach(itemAction => {
+
+                    if(itemAction.actionId === action.actionId){
+
+                        itemWihtAction = item
+
+                    }
+
+                })
+
+            })
+        }
         
         return itemWihtAction
     }
@@ -560,7 +571,7 @@ function genItemPool(){
 
             //Top container on click
             let clickAttr =`onclick="genItemModal('${item.itemId}')"`
-            if(type == 'reward'){
+            if(type === 'reward'){
 
                 clickAttr =`onclick="genItemModal('${item.itemId}', 'reward')"`
 
@@ -594,8 +605,8 @@ function genItemPool(){
                 }
                 else {
                     actionSet += `
-                        ${upp(item.actionType)} (${item.actionValue}).<br>
-                        Charge time: ${item.chargeTime} seconds.
+                        ${upp(action.actionType)} (${action.actionValue}).<br>
+                        Charge time: ${action.chargeTime} seconds.
                     `
                 }
             })
@@ -615,7 +626,7 @@ function genItemPool(){
                             <p>Equip</p> <img src="./img/ico/item-equip-no.svg">
                         </button>`
 
-            if(type == 'reward'){
+            if     (type === 'reward'){
                 // btn1 = `<button class="drop-button body-12" onclick="toggleModal('item-modal'), genItemModal('${item.itemId}', 'reward')">
                 //             <img src="./img/ico/item-view.svg"> <p>View</p>
                 //         </button>`
@@ -624,7 +635,7 @@ function genItemPool(){
                             <p>Pick</p> <img src="./img/ico/item-pick.svg">
                         </button>`
             }
-            else if(type == 'item-to-buy'){
+            else if(type === 'item-to-buy'){
                 // btn1 = `<button class="drop-button body-12" onclick="toggleModal('item-modal'), genItemModal('${item.itemId}', 'reward')">
                 //             <img src="./img/ico/item-view.svg"> <p>View</p>
                 //         </button>`
@@ -633,7 +644,7 @@ function genItemPool(){
                             <p>Buy for ${item.cost}</p> <img src="./img/ico/coin.svg">
                         </button>`
             }
-            else if(type == 'item-to-sell'){
+            else if(type === 'item-to-sell'){
                 btn2 = `<button class="drop-button body-12" onclick="sellItem('${item.itemId}')">
                             <p>Sell for ${item.cost}</p> <img src="./img/ico/coin.svg">
                         </button>`
@@ -643,7 +654,7 @@ function genItemPool(){
                 //         </button>`
                 cardId += '-to-sell'//Adjust id to avoid conflicts
             }
-            else if(type == 'item-to-enhance'){
+            else if(type === 'item-to-enhance'){
                 btn1 = ``
 
                 btn2 = `<button class="equip-button body-12" onclick="modifyItem('${item.itemId}', 'enhance')">
@@ -651,13 +662,13 @@ function genItemPool(){
                         </button>`
                 cardId += '-to-enhance'//Adjust id to avoid conflicts
             }
-            else if(type == 'item-to-repair'){
+            else if(type === 'item-to-repair'){
                 btn2 = `<button class="equip-button body-12" onclick="modifyItem('${item.itemId}', 'repair')">
                             <p>Repair for ${calcCost('repair', item.itemId)}</p> <img src="./img/ico/coin.svg">
                         </button>`
                 cardId += '-to-repair'//Adjust id to avoid conflicts
             }
-            else if(type == 'item-to-choose'){
+            else if(type === 'item-to-choose'){
 
                 btn2 = `<button class="drop-button body-12" onclick="chooseOne('resolve', '${item.itemId}')">
                             <p>Choose</p>
@@ -679,13 +690,13 @@ function genItemPool(){
             //Set rarity glow
             let itemRarityGlow = `<div class='item-glow'>`
 
-            if(      item.itemRarity == 'magic'){
+            if(      item.itemRarity === 'magic'){
                 itemRarityGlow = `<div class='item-glow magic'>`
 
-            }else if(item.itemRarity == 'rare'){
+            }else if(item.itemRarity === 'rare'){
                 itemRarityGlow = `<div class='item-glow rare'>`
 
-            }else if(item.itemRarity == 'epic'){
+            }else if(item.itemRarity === 'epic'){
                 itemRarityGlow = `<div class='item-glow epic'>`
 
             }

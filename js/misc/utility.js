@@ -132,7 +132,7 @@ function countDuplicatesInArr(arr, type){
         let max = Math.max(...arr);
         return max
     }
-    else if(type == 'minValue'){ 
+    else if(type == 'minValue'){
         let arr = Object.values(counts);
         return Math.min(...arr);
     }

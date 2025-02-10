@@ -1,5 +1,5 @@
 //Player
-class PlayerObj {
+    class PlayerObj {
     constructor(){
         //Life
             this.baseLife          = config.life   //Lvl 1 char life
@@ -23,17 +23,6 @@ class PlayerObj {
             this.def               = this.baseDef
             this.defChange         = 0
             this.defChangeMarker   = false
-        //Dice
-            this.baseDice          = config.dice //needed as ref in case flat dice is modified by item
-            this.flatDice          = this.baseDice
-            this.dice              = this.baseDice
-            this.diceChange        = 0
-            this.diceChangeMarker  = false
-        //Roll
-            this.roll              = 0
-            this.rollBonus         = 0
-            this.rollChange        = 0
-            this.rollChangeMarker  = false
 
         //While in combat
             this.piercing          = false
@@ -67,7 +56,7 @@ class PlayerObj {
             this.startingItems  = config['st' + upp(this.class)]
 
         //Class overrides
-            if(      this.class == 'guardian'){
+            if(      this.class === 'guardian'){
                 this.baseLife          = config.life        //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
@@ -75,13 +64,13 @@ class PlayerObj {
                 this.baseDice          = 4 //needed as ref in case flat dice is modified by item
                 this.flatDice          = this.baseDice
                 this.dice              = this.baseDice
-            }else if(this.class == 'crusader'){
+            }else if(this.class === 'crusader'){
                 this.baseLife          = config.life - 5   //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
 
                 this.inventorySlots    = config.inventory - 5
-            }else if(this.class == 'wanderer'){
+            }else if(this.class === 'wanderer'){
                 this.baseLife          = config.life - 10   //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
@@ -96,7 +85,7 @@ class PlayerObj {
     }
 }
 
-function checkIfPlayerCanAttack(){
+    function checkIfPlayerCanAttack(){
 
     //Check if player has an attack action
     let attack = false
@@ -110,9 +99,7 @@ function checkIfPlayerCanAttack(){
         })
     })
 
-    if(attack == false){
-        // console.log(findByProperty(actionsRef, 'keyId', 'a62'));
-        // gs.plObj.actions.unshift(findByProperty(actionsRef, 'keyId', 'a62'))
+    if(attack === false){
         gs.plObj.actions.unshift(new ActionObj('punch'))
     }
 
@@ -120,7 +107,7 @@ function checkIfPlayerCanAttack(){
 }
 
 //* COMBAT MISC
-function resetFlatStats(){
+    function resetFlatStats(){
     //4.Set stats before combat
     //Restore sword dmg buff
     gs.plObj.swordDmgMod = 0
@@ -136,102 +123,97 @@ function resetFlatStats(){
     } 
 
     //Recalc all items and actions
-    resolvePlayerStats()
+    resolveStats(gs.plObj)
 }
 
 //Experience and level
-function resolveExpAndLvl(expAmounth){
-    //Add 1 exp for winning
-    gs.plObj.exp += expAmounth  
-    
-    //TREE: On exp gain passives
-    resolveOnStatChangePassives('exp')                            
-    
-    //Lvl up
-    if(gs.plObj.exp >= gs.plObj.lvlUpExp){
-        levelUp()
+    function resolveExpAndLvl(expAmounth){
+        //Add 1 exp for winning
+        gs.plObj.exp += expAmounth
+
+        //TREE: On exp gain passives
+        resolveOnStatChangePassives('exp')
+
+        //Lvl up
+        if(gs.plObj.exp >= gs.plObj.lvlUpExp){
+            levelUp()
+        }
+
+        //-1 for initial lvl 1
+        gs.plObj.treePoints = gs.plObj.lvl - gs.plObj.treeNodes.length - 1
+
+        //Changes button color when you have skill points
+        lvlupUiIndication()
     }
-    
-    //-1 for initial lvl 1
-    gs.plObj.treePoints = gs.plObj.lvl - gs.plObj.treeNodes.length - 1
 
-    //Changes button color when you have skill points
-    lvlupUiIndication()
-}
+    function levelUp(){
 
-function levelUp(){
+        gs.plObj.lvl++
 
-    gs.plObj.lvl++
+        //Reduce exp by elp required to lvl up
+        gs.plObj.exp = gs.plObj.exp - gs.plObj.lvlUpExp
 
-    //Reduce exp by elp required to lvl up
-    gs.plObj.exp = gs.plObj.exp - gs.plObj.lvlUpExp
+        //Calculate exp required for the next level
+        gs.plObj.lvlUpExp = Math.ceil(config.expBase * (gs.plObj.lvl * config.expMult) ** config.expExpo)
 
-    //Calculate exp required for the next level
-    gs.plObj.lvlUpExp = Math.ceil(config.expBase * (gs.plObj.lvl * config.expMult) ** config.expExpo)
-
-    //Check exp to see if more than 1 level was gained
-    resolveExpAndLvl(0)
-}
+        //Check exp to see if more than 1 level was gained
+        resolveExpAndLvl(0)
+    }
 
 
 //Resolve stats
-    //Recalc stats 
+    //Recalculates stats
     //Adds actions from items
     //Adds passive stats from items,actions and skill tree
-    function resolvePlayerStats(){
+    function resolveStats(target){
 
 
         //Resets actions
         //Regen action list if the item was added, removed, equipped, unequipped
-        gs.plObj.actions = []
+        target.actions = []
 
         //Adds actions from items to players actions array.
-        gs.plObj.inventory.forEach(item => {
+        target.inventory.forEach(item => {
 
             //Check all equipped items
             if(item.equipped){
 
                 //Add all actions from equipped item.
                 item.actions.forEach(action => {
-                    if(gs.plObj.actionSlots < gs.plObj.actions.length) return
+                    if(target.actionSlots < target.actions.length) return
                     if(action.actionCharge < 1) return
 
                     //Add action to player actions
-                    gs.plObj.actions.push(action)  
+                    target.actions.push(action)  
                 })
             }
         })
 
         //Add temporary actions to players actions array.
-        gs.plObj.tempActions.forEach(action => {
-            if(gs.plObj.actionSlots > gs.plObj.actions.length){
-                gs.plObj.actions.push(action)
+        target.tempActions.forEach(action => {
+            if(target.actionSlots > target.actions.length){
+                target.actions.push(action)
             }
         })
 
 
         //Resolve life  
         //Add reclaculation for all stats
-        let baseLife       = gs.plObj.baseLife + gs.plObj.flatLifeMod //Flat life mod for max life spell fx
+        let baseLife               = target.baseLife + target.flatLifeMod //Flat life mod for max life spell fx
         let flatLife       = 0
         let lifeMultiplier = 1
-        let lifeDeviation  = gs.plObj.life - gs.plObj.flatLife// See if temporary bonuses should be included.
+        let lifeDeviation  = target.life - target.flatLife// See if temporary bonuses should be included.
 
-        let basePower      = gs.plObj.basePower
+        let basePower      = target.basePower
         let flatPower      = 0
-        let powerDeviation = gs.plObj.power - gs.plObj.flatPower
+        let powerDeviation = target.power - target.flatPower
 
-        let baseDef        = gs.plObj.baseDef
+        let baseDef        = target.baseDef
         let flatDef        = 0
-        let defDeviation   = gs.plObj.def - gs.plObj.flatDef
+        let defDeviation   = target.def - target.flatDef
 
-        let baseDice       = gs.plObj.baseDice
-        let flatDice       = baseDice
-        let diceDeviation  = gs.plObj.dice - gs.plObj.flatDice
-
-        let flatSlots      = gs.plObj.baseSlots
-
-        let flatInv        = gs.plObj.inventorySlots
+        let flatSlots      = target.baseSlots
+        let flatInv        = target.inventorySlots
 
         //Extracts stats from item or passive skill tree node
         function extractPassiveStats(obj){{
@@ -273,21 +255,21 @@ function levelUp(){
         }}
 
         //Check items
-        gs.plObj.inventory.forEach(item => {
+        target.inventory.forEach(item => {
             if(item.passiveStats.length > 0 && item.equipped){
                 extractPassiveStats(item)
             }
         })
 
         //Check actions
-        gs.plObj.actions.forEach(action => {
+        target.actions.forEach(action => {
             if(action.passiveStats.length > 0){
                 extractPassiveStats(action)
             }
         })
 
         //Check skill tree nodes
-        gs.plObj.treeNodes.forEach(node => {
+        target.treeNodes.forEach(node => {
             if(node.passiveStats !== undefined && node.passiveStats.length > 0){
                 extractPassiveStats(node)
             }
@@ -295,31 +277,26 @@ function levelUp(){
 
         //Life final calculation
         //(base + flat) + deviation + temporary
-        gs.plObj.flatLife= Math.round((baseLife + flatLife) * lifeMultiplier)
-        gs.plObj.life = gs.plObj.flatLife+ lifeDeviation  
+        target.flatLife= Math.round((baseLife + flatLife) * lifeMultiplier)
+        target.life = target.flatLife+ lifeDeviation  
 
         //Power final calculation
         //(base + flat) + deviation + temporary
-        gs.plObj.powerUnrounded = basePower + flatPower
-        gs.plObj.flatPower      = basePower + Math.floor(flatPower)
-        gs.plObj.power          = gs.plObj.flatPower + powerDeviation
+        target.powerUnrounded = basePower + flatPower
+        target.flatPower      = basePower + Math.floor(flatPower)
+        target.power          = target.flatPower + powerDeviation
 
         //Def final calc
-        gs.plObj.defUnrounded   = baseDef + flatDef
-        gs.plObj.flatDef        = baseDef + Math.floor(flatDef)
-        gs.plObj.def            = gs.plObj.flatDef + defDeviation
-
-        //Dice
-        gs.plObj.diceUnrounded  = flatDice
-        gs.plObj.flatDice       = Math.floor(flatDice)
-        gs.plObj.dice           = gs.plObj.flatDice + diceDeviation
+        target.defUnrounded   = baseDef + flatDef
+        target.flatDef        = baseDef + Math.floor(flatDef)
+        target.def            = target.flatDef + defDeviation
 
         //Slots 
-        gs.plObj.equipmentSlots = Math.floor(flatSlots)
-        gs.plObj.actionSlots    = Math.floor(flatSlots)
+        target.equipmentSlots = Math.floor(flatSlots)
+        target.actionSlots    = Math.floor(flatSlots)
 
         //Inventory
-        gs.plObj.inventorySlots = Math.floor(flatInv)
+        target.inventorySlots = Math.floor(flatInv)
     }
 
 
@@ -335,6 +312,7 @@ function levelUp(){
 
         return arr
     }
+
     function syncCharPage(){
         
         //Add text
@@ -345,7 +323,6 @@ function levelUp(){
 
         el('.life').innerHTML           = gs.plObj.life
         el('.flatLife').innerHTML       = gs.plObj.flatLife
-        el('.flatDice').innerHTML       = `${sFrac(gs.plObj.diceUnrounded)[0]}<span class="w50">${sFrac(gs.plObj.diceUnrounded)[1]}</span>`
         el('.power').innerHTML          = `${sFrac(gs.plObj.powerUnrounded)[0]}<span class="w50">${sFrac(gs.plObj.powerUnrounded)[1]}</span>`
         el('.def').innerHTML            = `${sFrac(gs.plObj.defUnrounded)[0]}<span class="w50">${sFrac(gs.plObj.defUnrounded)[1]}</span>`
 
@@ -448,15 +425,15 @@ function levelUp(){
 
         clearClassOfAll('char-highlight')
 
-        if      (char == 'guardian'){
+        if      (char === 'guardian'){
             el('char-heading').innerHTML = 'Guardian'
             el('char-description').innerHTML = 'Uses d4, specializes in defense.'
         }
-        else if (char == 'crusader'){
+        else if (char === 'crusader'){
             el('char-heading').innerHTML = 'Crusader'
             el('char-description').innerHTML = 'Uses d6, specializes in survival.'
         }
-        else if (char == 'wanderer'){
+        else if (char === 'wanderer'){
             el('char-heading').innerHTML = 'Wanderer'
             el('char-description').innerHTML = 'Uses d8, specializes in poisons.'
         }
@@ -466,4 +443,19 @@ function levelUp(){
         el('char-select-button').setAttribute('onclick',`config.class = '${char}', initGame()`)
         el('char-select-button').classList.remove('hide')
 
+    }
+
+    //Trigger ghost animation
+    function triggerCombatGhosts(source){
+        //Trigger ghost animation
+        el('e-ghost').setAttribute('style',`transform: scale(-1, 1);`) //flip ene
+
+        if (source === gs.plObj){
+            el('p-ghost').setAttribute('src',`./img/character/ghost-${rng(4)}.svg`)
+            runAnim(el(`p-ghost`), 'ghost-trigger')
+        }
+        if(source === gs.enObj){
+            el('e-ghost').setAttribute('src',`./img/character/ghost-${rng(4)}.svg`)
+            runAnim(el('e-ghost'), 'ghost-trigger')
+        }
     }

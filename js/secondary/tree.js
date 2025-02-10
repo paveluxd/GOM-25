@@ -15,7 +15,7 @@ let prefix = 'treenode_'
 
             allocateTreeNode(treeHtmlElemId)
 
-            resolvePlayerStats()
+            resolveStats(gs.plObj)
             saveGame()
             lvlupUiIndication()
             syncUi()
@@ -230,7 +230,7 @@ let prefix = 'treenode_'
         //Creates tree tile elem
             function createTreeCell(column, row, node){
                 //Override node if paths were added in treeStructure
-                if(node == 'ver'){ 
+                if(node == 'ver'){
                     node = 'vertical-path'
                 }
 

@@ -1,7 +1,5 @@
 //UI
     function syncUi(){
-        // console.log(`UI sync`)
-
         syncActionTiles()
         syncCharPage()
         syncItemCards()
@@ -119,7 +117,7 @@
                 })
             });
 
-        //Modify inventroy indicator.
+        //Modify inventory indicator.
             el('inventory-tab-extension').innerHTML = `
                 <span>
                     Equipment slots: ${calcEquippedItems()}/${gs.plObj.equipmentSlots}
