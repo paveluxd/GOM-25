@@ -20,10 +20,19 @@
   {
     "itemName": "sword",
     "actions": "sword",
-    "passiveStats": "",
+    "passiveStats": "critChance:25",
     "itemSlot": "",
     "tags": "weapon",
     "desc": "a weapon shaped by the forgotten age. Wield it as a silent hymn to the lost glories of previous owners, its edge is a faithful companion in a world longing for heroes",
+    "itemRarity": ""
+  },
+  {
+    "itemName": "mace",
+    "actions": "mace",
+    "passiveStats": "",
+    "itemSlot": "",
+    "tags": "weapon",
+    "desc": "",
     "itemRarity": ""
   },
 

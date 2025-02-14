@@ -546,7 +546,7 @@ let prefix = 'treenode_'
 
                 // gs.plObj.dmgDone += gs.plObj.dmgTaken
 
-                changeStat('life', -gs.enObj.dmgDone, 'enemy')
+                changeStat('life', -gs.enObj.dmgDone, gs.enObj)
 
                 //Log
                 gs.logMsg.push(`${node.name}: ${node.desc}`)
@@ -581,7 +581,7 @@ let prefix = 'treenode_'
                 //Check item type (due to itemless actions)
                 if(gs.enObj.def < 1) return
 
-                changeStat('def', -1,'enemy')
+                changeStat('def', -1,gs.enObj)
                 // gs.enObj.def -= 1
 
                 //Log
@@ -652,7 +652,7 @@ let prefix = 'treenode_'
                 gs.logMsg.push(`${upp(node.name)} ${node.desc}.`)
             }else if(node.id == 'T21' && gs.plObj.power == 0){//static power
 
-                changeStat('power', 1, 'player')
+                changeStat('power', 1, gs.plObj)
                 
                 //Log
                 gs.logMsg.push(`${upp(node.name)} ${node.desc}.`)
@@ -736,7 +736,7 @@ let prefix = 'treenode_'
 
                 let randomStat = rarr(negativeStats)
 
-                changeStat(randomStat, Math.round((gs.plObj[randomStat]/2) * -1), 'player' )
+                changeStat(randomStat, Math.round((gs.plObj[randomStat]/2) * -1), gs.plObj )
 
                 //Log
                 gs.logMsg.push(`${upp(node.name)} ${node.desc}.`)
@@ -745,7 +745,7 @@ let prefix = 'treenode_'
                 //Check if player has a negative stat
                 if(gs.plObj.def > -1) return
 
-                changeStat('def', 1, 'player')
+                changeStat('def', 1, gs.plObj)
 
                 //Log
                 gs.logMsg.push(`${upp(node.name)} ${node.desc}.`)
@@ -1069,9 +1069,6 @@ let prefix = 'treenode_'
 
         },{id:'T00', name:'absolute barrier',
             desc:'Barrier absorbs 100% of damage.',
-
-        },{id:'T00', name:'swift movement',
-            desc:'Your cooldowns recover 1 turn faster',
 
         },{id:'T00', name:'speed advantage',
             desc:'Enemy skipts every 5th turn',

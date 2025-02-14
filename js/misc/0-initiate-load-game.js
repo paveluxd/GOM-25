@@ -4,7 +4,7 @@
         //Create initial game and player objects
         if(typeof gs == 'undefined'){
             gs = new GameState
-            gs.plObj = new PlayerObj
+            gs.plObj = new Player
 
             //Resolve ititial items
             gs.plObj.startingItems.forEach(itemName => {addItem(itemName, undefined, gs.plObj.inventory)})

@@ -1,62 +1,88 @@
-//Player
-    class PlayerObj {
-    constructor(){
+class Character {
+    constructor() {
         //Life
-            this.baseLife          = config.life   //Lvl 1 char life
-            this.flatLifeMod       = 0
-            this.flatLife          = this.baseLife //Life cap.
-            this.life              = this.baseLife //Current life.
+        this.baseLife          = config.life   //Lvl 1 char life
+        this.flatLifeMod       = 0
+        this.flatLife          = this.baseLife //Life cap.
+        this.life              = this.baseLife //Current life.
+        this.lifeChange        = 0
+        this.lifeChangeMarker  = false
 
-            this.dmgDone           = 0
-            this.dmgTaken          = 0
-            this.lifeChange        = 0
-            this.lifeChangeMarker  = false
+        //Dmg
+        this.dmgDone           = 0
+        this.dmgTaken          = 0
+
+        //Crit
+        this.baseCritChance    = 0
+        this.critChance        = 0
+        this.critMultiplier    = 2
+
         //Power
-            this.basePower         = config.power
-            this.flatPower         = this.basePower
-            this.power             = this.basePower
-            this.powerChange       = 0
-            this.powerChangeMarker = false
+        this.basePower         = config.power
+        this.flatPower         = this.basePower
+        this.power             = this.basePower
+        this.powerChange       = 0
+        this.powerChangeMarker = false
+
         //Def
-            this.baseDef           = config.def
-            this.flatDef           = this.baseDef
-            this.def               = this.baseDef
-            this.defChange         = 0
-            this.defChangeMarker   = false
+        this.baseDef           = config.def
+        this.flatDef           = this.baseDef
+        this.def               = this.baseDef
+        this.defChange         = 0
+        this.defChangeMarker   = false
 
         //While in combat
-            this.piercing          = false
-            this.swordDmgMod       = 0
-            this.poisonBuff        = false
-            this.combatState       = {"dmgCap":undefined}
-            
+        this.piercing          = false
+        this.swordDmgMod       = 0
+        this.poisonBuff        = false
+        this.combatState       = {"dmgCap":undefined}
+
+        //FROM ENEMY CLASS REVIEW
+        //Dots - move to array
+        this.appliedPoisonStacks = 0
+        this.poisonStacks        = 0
+        this.appliedBurnStacks   = 0
+        this.burnStacks          = 0
+        this.state               = ''                   // Used for stun, fear etc.
+        this.forcedAction        = ''                   // For items that force acions
+
         //Inventory
-            this.inventorySlots = config.inventory
-            this.inventory      = [] //Items gained as rewards
+        this.inventorySlots = config.inventory
+        this.inventory      = [] //Items gained as rewards
+
         //Equipment slots
-            this.baseSlots      = config.slots
-            this.equipmentSlots = this.baseSlots //Modified by items
+        this.baseSlots      = config.slots
+        this.equipmentSlots = this.baseSlots //Modified by items
+
         //Actions
-            this.actionSlots    = this.baseSlots
-            this.actions        = [] //Actions gained from items
-            this.tempActions    = [] //Temporary actions
-                        
+        this.actionSlots    = this.baseSlots
+        this.actions        = [] //Actions gained from items
+        this.tempActions    = [] //Temporary actions
+
         //Sub-stats
-            this.coins          = config.coins
+        this.coins          = config.coins
 
         //Progression
-            this.exp            = 0
-            this.lvl            = 1
-            this.lvlUpExp       = Math.ceil(config.expBase * (this.lvl * config.expMult) ** config.expExpo)
-            this.treeNodes      = []
-            this.treePoints     = config.basePassieSkillPoints
-        //Misc
-            this.offeredItemsArr= [] //Stores rewards
-            this.class          = config.class
-            this.startingItems  = config['st' + upp(this.class)]
+        this.exp            = 0
+        this.lvl            = 1
+        this.lvlUpExp       = Math.ceil(config.expBase * (this.lvl * config.expMult) ** config.expExpo)
+        this.treeNodes      = []
+        this.treePoints     = config.basePassieSkillPoints
 
-        //Class overrides
-            if(      this.class === 'guardian'){
+        //Misc
+        this.offeredItemsArr= [] //Stores rewards
+        this.class          = config.class
+        this.startingItems  = config['st' + upp(this.class)]
+    }
+}
+
+//PLAYER
+    class Player extends Character {
+        constructor(){
+            super()
+
+            //Class overrides
+            if     (this.class === 'guardian'){
                 this.baseLife          = config.life        //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
@@ -64,13 +90,15 @@
                 this.baseDice          = 4 //needed as ref in case flat dice is modified by item
                 this.flatDice          = this.baseDice
                 this.dice              = this.baseDice
-            }else if(this.class === 'crusader'){
+            }
+            else if(this.class === 'crusader'){
                 this.baseLife          = config.life - 5   //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
 
                 this.inventorySlots    = config.inventory - 5
-            }else if(this.class === 'wanderer'){
+            }
+            else if(this.class === 'wanderer'){
                 this.baseLife          = config.life - 10   //Lvl 1 char life
                 this.flatLife          = this.baseLife      //Life cap.
                 this.life              = this.baseLife      //Current life.
@@ -82,35 +110,13 @@
                 this.coins             = config.coins + 10
                 this.inventorySlots    = config.inventory - 10
             }
+        }
     }
-}
-
-    function checkIfPlayerCanAttack(){
-
-    //Check if player has an attack action
-    let attack = false
-
-    // console.log(gs.plObj.actions);
-    gs.plObj.actions.forEach(action => {
-        action.tags.split(', ').forEach(tag => {
-            if(tag == 'attack'){
-                attack = true
-            }
-        })
-    })
-
-    if(attack === false){
-        gs.plObj.actions.unshift(new ActionObj('punch'))
-    }
-
-    //Add punch to actions
-}
 
 //* COMBAT MISC
     function resetFlatStats(){
+
     //4.Set stats before combat
-    //Restore sword dmg buff
-    gs.plObj.swordDmgMod = 0
 
     //Restore flat def
     if(gs.plObj.def !== gs.plObj.flatDef){
@@ -167,7 +173,6 @@
     //Adds passive stats from items,actions and skill tree
     function resolveStats(target){
 
-
         //Resets actions
         //Regen action list if the item was added, removed, equipped, unequipped
         target.actions = []
@@ -204,51 +209,50 @@
         let lifeMultiplier = 1
         let lifeDeviation  = target.life - target.flatLife// See if temporary bonuses should be included.
 
-        let basePower      = target.basePower
+        let basePower              = target.basePower
         let flatPower      = 0
         let powerDeviation = target.power - target.flatPower
 
-        let baseDef        = target.baseDef
+        let baseDef                = target.baseDef
         let flatDef        = 0
         let defDeviation   = target.def - target.flatDef
 
         let flatSlots      = target.baseSlots
         let flatInv        = target.inventorySlots
 
+        //Crit
+        let baseCritChance = target.baseCritChance
+
         //Extracts stats from item or passive skill tree node
         function extractPassiveStats(obj){{
             obj.passiveStats.forEach(statObj => {
         
                 //Flat life
-                if(     statObj.stat == 'life'){
+                if(     statObj.stat === 'life'){
                     flatLife += statObj.value
                 }
                 //% life
-                else if(statObj.stat == 'life%'){
+                else if(statObj.stat === 'life%'){
                     lifeMultiplier += (statObj.value / 100)
                 }
                 //Flat power
-                else if(statObj.stat == 'power'){
+                else if(statObj.stat === 'power'){
                     flatPower += statObj.value
                 }
+                //Crit chance
+                else if(statObj.stat === 'critChance'){
+                    baseCritChance += statObj.value
+                }
                 //Def
-                else if(statObj.stat == 'def'){
+                else if(statObj.stat === 'def'){
                     flatDef += statObj.value
                 }
-                //Replace dice
-                else if(statObj.stat == 'dice'){
-                    flatDice = statObj.value
-                }
-                //Mod dice
-                else if(statObj.stat == 'dice-mod'){
-                    flatDice += statObj.value
-                }
                 //Item slots
-                else if(statObj.stat == 'slots'){
+                else if(statObj.stat === 'slots'){
                     flatSlots += statObj.value
                 }
                 //Inventory
-                else if(statObj.stat == 'inventory'){
+                else if(statObj.stat === 'inventory'){
                     flatInv += statObj.value
                 }
             })
@@ -297,6 +301,9 @@
 
         //Inventory
         target.inventorySlots = Math.floor(flatInv)
+
+        //Crit
+        target.critChance     = Math.round(baseCritChance)
     }
 
 
@@ -335,6 +342,9 @@
 
         el('.stage').innerHTML          = gs.stage
         el('.playerClass').innerHTML    = upp(gs.plObj.class)
+
+        //Crit
+        el('.critChance').innerHTML     = gs.plObj.critChance
 
 
         //Add action cards

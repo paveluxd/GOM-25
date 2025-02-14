@@ -1,6 +1,6 @@
 //Items
 class ItemObj {
-    constructor(itemName, iLvl, type){
+    constructor(itemName, iLvl, type, owner){
         // console.log(`>>> ${itemName} ${iLvl} ${type} generated.`)
 
         //Static properties taken from reference.
@@ -104,14 +104,14 @@ function genItemPool(){
     let roll = rng(85) + gs.stage * 5
     // console.log(roll);
 
-    if       (roll < 70){ //70%
-        itemPool = itemsRef.filter(item => item.itemRarity == '') //normal
+    if       (roll < 300){ //70%
+        itemPool = itemsRef.filter(item => item.itemRarity === '') //normal
     }else if (roll < 90){ //20%
-        itemPool = itemsRef.filter(item => item.itemRarity == 'magic')
+        itemPool = itemsRef.filter(item => item.itemRarity === 'magic')
     }else if (roll < 97){ //7%
-        itemPool = itemsRef.filter(item => item.itemRarity == 'rare')
+        itemPool = itemsRef.filter(item => item.itemRarity === 'rare')
     }else{                //3%
-        itemPool = itemsRef.filter(item => item.itemRarity == 'epic')
+        itemPool = itemsRef.filter(item => item.itemRarity === 'epic')
     }
 
     return itemPool
@@ -162,25 +162,7 @@ function genItemPool(){
     // Resolve post-roll passives
     function resolvePostRollPassives(){
         gs.plObj.actions.forEach(action => {
-            if     (action.keyId == 'a58'){ // power surge
-                if(gs.plObj.roll > 7){
-                    gs.plObj.power += action.actionMod
-                    gs.logMsg.push(`Power surge: +1 power (passive).`)
-                    el('p-power').innerHTML = gs.plObj.power
-                }
-            }
-            else if(action.keyId == 'a59'){ // armor up
-                if(gs.plObj.roll == 4){
-                    //Change stat
-                    changeStat('def', action.actionMod, 'player')
 
-                    //Log
-                    gs.logMsg.push(`Armor up: ${action.actionMod} def (passive).`)
-
-                    //Sync ui
-                    el('p-def').innerHTML = gs.plObj.def
-                }
-            }
         })
 
         resolvePostRollTreePassives()

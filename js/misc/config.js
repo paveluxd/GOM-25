@@ -56,9 +56,9 @@ let config = {
 
 // Test config
 if(1 === 1){
-    // config.life = 110
-    config.power = 0
-    config.def   = 0
+    config.life = 100
+    config.power = 1
+    config.def   = 2
     config.slots = 3
     config.class = 'guardian'
     config.coins = 90
@@ -69,16 +69,15 @@ if(1 === 1){
     // Game
     config.showScreen        = 'map'
     if(config.showScreen   === 'combat'){config.testCombat = true} //Initiates combat at the start (for testing).
-    config.clearLs           = false
+    config.clearLs           = true
     config.showCombatInfoLog = true
     // config.stage             = 2
     config.skipTutorial      = true
 
     // Starting items
     config.stGuardian = [
-            'sword',
-            // 'wooden staff',
-            'shield'
+            // 'club',
+            'mace'
     ]
     config.stCrusader = [
         'sword',
@@ -95,7 +94,7 @@ if(1 === 1){
     ]
     
     //Enemy
-    // config.forceEnemyProfile = ['enemy','gladiator']
+    config.forceEnemyProfile = ['enemy','balanced']
     // config.forceEnemyProfile = ['boss','boss3']
     // config.forceEnemyAction  = 'block'
 

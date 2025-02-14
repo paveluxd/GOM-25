@@ -6,10 +6,9 @@
     "passiveStats": "",
     "actionMod": 3,
     "actionCharge": 300,
-    "cooldown": "",
 
     "actionDesc": "attack",
-    "actionValue": 2,
+    "actionValue": 3,
     "scalingMultiplier": 3,
     "chargeTime": 3000
   },
@@ -20,11 +19,10 @@
     "passiveStats": "",
     "actionMod": 3,
     "actionCharge": 300,
-    "cooldown": "",
     "actionType": "",
 
     "actionDesc": "attack",
-    "actionValue": 2,
+    "actionValue": 3,
     "scalingMultiplier": 3,
     "chargeTime": 3000
   },
@@ -35,12 +33,24 @@
     "passiveStats": "",
     "actionMod": 3,
     "actionCharge": 300,
-    "cooldown": "",
 
     "actionDesc": "attack",
     "actionValue": 1,
     "scalingMultiplier": 2,
     "chargeTime": 2000
+  },
+  {
+    "actionName": "mace",
+    "tags": "",
+    "desc": "",
+    "passiveStats": "",
+    "actionMod": 3,
+    "actionCharge": 300,
+
+    "actionDesc": "Deal dmg equal to def",
+    "actionValue": 1,
+    "scalingMultiplier": 1,
+    "chargeTime": 3000
   },
 
   {
@@ -50,7 +60,6 @@
     "passiveStats": "",
     "actionMod": 3,
     "actionCharge": 300,
-    "cooldown": "",
 
     "actionDesc": "attack",
     "actionValue": 8,
@@ -65,7 +74,6 @@
     "passiveStats": "",
     "actionMod": "",
     "actionCharge": 60,
-    "cooldown": "",
     "actionType": "",
 
     "actionDesc": "gain def",
@@ -81,7 +89,6 @@
     "passiveStats": "",
     "actionMod": 1,
     "actionCharge": 60,
-    "cooldown": 2,
     "actionType": "",
 
     "actionDesc": "gain power",

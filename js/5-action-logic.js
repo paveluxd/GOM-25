@@ -9,7 +9,6 @@
                 {key:'actionId'    ,val: "ac" + Math.random().toString(8).slice(2)},//gens unique id
                 {key:'actionCharge',val: 10},
                 {key:'actionMod'   ,val: 0},
-                {key:'cooldown'    ,val: undefined},
                 {key:'actionType'  ,val: 'generic'},
                 {key:'desc'        ,val: ''},
                 {key:'passiveStats',val: []},
@@ -74,11 +73,15 @@
 
                 // Att
                 case 'club':
-                    actor.dmgDone = this.actionValue + gs.plObj.power
+                    actor.dmgDone = this.attackCalc({actor: actor})
                     break
 
                 case 'sword':
-                    actor.dmgDone = this.actionValue + gs.plObj.power
+                    actor.dmgDone = this.attackCalc({actor: actor})
+                    break
+
+                case 'mace':
+                    actor.dmgDone = this.attackCalc({baseDmg: this.actionValue + gs.plObj.def, actor: actor})
                     break
 
                 case 'dagger':
@@ -108,6 +111,21 @@
                 default:
                     console.log('UNKNOWN ACTION: ', this.actionName)
             }
+        }
+
+        //Attack formula
+        attackCalc(args){
+            if(!args){args = {actor: gs.enObj}} // set def args object if it doesn't exist
+            if(args.baseDmg === undefined){args.baseDmg = this.actionValue}
+
+            // Roll for crit chance
+            let critRoll = rng(100)
+
+            if(critRoll < args.actor.critChance){
+                return Math.round((args.baseDmg + args.actor.power) * args.actor.critMultiplier)
+            }
+
+            return args.baseDmg + args.actor.power
         }
     }
 
@@ -233,9 +251,6 @@
         else if(itemString.includes('curse')){
             itemString = 'curse scroll'
         }
-
-        // Cooldown management.
-        let cooldownCounter = ``
 
         let heading = `${upp(action.actionName)}`
         let desc = `

@@ -372,17 +372,7 @@
     right: -8px;
     bottom: -8px;
 }
-.action .cooldown-indicator{
-    color: var(--white);
-    background-color: black;
-    padding: 4px 6px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
 
-    border-radius: 0 4px 0 0;
-    z-index: 5;
-}
 .action .charge-indicator, span.slot-indicator{
     color: var(--white);
     background-color: black;

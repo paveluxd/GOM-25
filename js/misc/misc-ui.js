@@ -250,7 +250,7 @@
 
     //Sprite builder
     function spriteBuilder(target){
-        if(target == 'player'){
+        if(target === 'player'){
 
             let playerSprites = document.querySelectorAll('.player-sprite')
 
